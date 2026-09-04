@@ -1,0 +1,11 @@
+# Build artefacts are committed on purpose — see README.
+# The demo must be openable by non-technical reviewers without a toolchain.
+
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/
+.idea/
+.vscode/
+*.log

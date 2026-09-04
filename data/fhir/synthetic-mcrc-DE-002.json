@@ -1,0 +1,2133 @@
+{
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6",
+      "resource": {
+        "birthDate": "1972",
+        "gender": "male",
+        "id": "de002-patient-0001",
+        "identifier": [
+          {
+            "system": "urn:synthetic:mcrc:demo",
+            "value": "synthetic-mcrc-DE-002"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cfbcfa8e-7f97-578d-b361-5e715c951f59",
+      "resource": {
+        "bodySite": [
+          {
+            "text": "rectum"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "display": "Problem List Item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "C20",
+              "display": "Malignant neoplasm of rectum",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+            },
+            {
+              "code": "254214001",
+              "display": "Carcinoma of rectum",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "Malignant neoplasm of rectum"
+        },
+        "id": "de002-condition-primary-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "adenocarcinoma"
+          }
+        ],
+        "onsetDateTime": "2025-07-10",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "display": "Confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:35df02ff-d058-550f-bc12-0f1ca9b60aed",
+      "resource": {
+        "bodySite": [
+          {
+            "text": "liver"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "display": "Problem List Item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "C78.7",
+              "display": "Secondary malignant neoplasm of liver",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+            },
+            {
+              "code": "94381002",
+              "display": "Secondary malignant neoplasm of liver",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "Secondary malignant neoplasm of liver"
+        },
+        "id": "de002-condition-metastasis-liver-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "Metastatic disease"
+          }
+        ],
+        "onsetDateTime": "2025-07-10",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "display": "Confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6f2c7002-dbcf-570f-9d68-8c14169b5de8",
+      "resource": {
+        "bodySite": [
+          {
+            "text": "lung"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "display": "Problem List Item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "C78.00",
+              "display": "Secondary malignant neoplasm of lung",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+            },
+            {
+              "code": "94392000",
+              "display": "Secondary malignant neoplasm of lung",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "Secondary malignant neoplasm of lung"
+        },
+        "id": "de002-condition-metastasis-lung-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "Metastatic disease"
+          }
+        ],
+        "onsetDateTime": "2025-07-10",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "display": "Confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fa1a143c-4d45-581a-9a1e-e49021c8b596",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "display": "Exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "21908-9",
+              "display": "Stage group.clinical Cancer",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "Clinical TNM stage"
+        },
+        "component": [
+          {
+            "code": {
+              "text": "T category"
+            },
+            "valueString": "cT3"
+          },
+          {
+            "code": {
+              "text": "N category"
+            },
+            "valueString": "cN2"
+          },
+          {
+            "code": {
+              "text": "M category"
+            },
+            "valueString": "cM1b"
+          }
+        ],
+        "effectiveDateTime": "2025-07-12",
+        "id": "de002-observation-stage-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "method": {
+          "text": "clinical"
+        },
+        "note": [
+          {
+            "text": "cT3N2M1b"
+          }
+        ],
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "261650005",
+              "display": "Stage IV",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "IV"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:be8d7a19-20a1-59b3-bec8-1a8ca3624a76",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "21288-6",
+              "display": "KRAS gene targeted mutation analysis",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "48005-3",
+                  "display": "Amino acid change [Type]",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "p.Gly12Asp",
+                  "display": "p.Gly12Asp",
+                  "system": "http://varnomen.hgvs.org"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "81252-9",
+                  "display": "Discrete genetic variant",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "NM_004985.5:c.35G>A",
+                  "display": "NM_004985.5:c.35G>A",
+                  "system": "http://varnomen.hgvs.org"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "48018-6",
+                  "display": "Gene studied [ID]",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "HGNC:6407",
+                  "display": "KRAS",
+                  "system": "http://www.genenames.org"
+                }
+              ]
+            }
+          }
+        ],
+        "effectiveDateTime": "2025-07-25",
+        "id": "de002-observation-kras-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "specimen": {
+          "reference": "urn:uuid:79af38fe-3927-5bdf-b37b-1adb70b1a056"
+        },
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "10828004",
+              "display": "Positive (qualifier value)",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3b229543-c05e-571d-ba93-700251d04753",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "72957-4",
+              "display": "NRAS gene targeted mutation analysis",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2025-07-25",
+        "id": "de002-observation-nras-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "specimen": {
+          "reference": "urn:uuid:79af38fe-3927-5bdf-b37b-1adb70b1a056"
+        },
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "260385009",
+              "display": "Negative (qualifier value)",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d3c02aae-309b-58de-bcb6-1478f6e19aa1",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "62862-8",
+              "display": "BRAF gene targeted mutation analysis",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2025-07-25",
+        "id": "de002-observation-braf-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "specimen": {
+          "reference": "urn:uuid:79af38fe-3927-5bdf-b37b-1adb70b1a056"
+        },
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "260385009",
+              "display": "Negative (qualifier value)",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ddaff9c4-028c-599a-975a-56f49c2a6abf",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "81695-9",
+              "display": "Microsatellite instability [Interpretation] in Cancer specimen Qualitative",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "dataAbsentReason": {
+          "coding": [
+            {
+              "code": "not-performed",
+              "display": "Not Performed",
+              "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason"
+            }
+          ]
+        },
+        "effectiveDateTime": "2025-07-25",
+        "id": "de002-observation-msi-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "specimen": {
+          "reference": "urn:uuid:79af38fe-3927-5bdf-b37b-1adb70b1a056"
+        },
+        "status": "registered",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c46d3f79-6f69-570d-bef3-53048274b783",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "2039-6",
+              "display": "CEA [Mass/volume] in Serum or Plasma",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-04-15",
+        "id": "de002-observation-cea-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        },
+        "valueQuantity": {
+          "code": "ug/L",
+          "system": "http://unitsofmeasure.org",
+          "unit": "ug/L",
+          "value": 112.7
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:40e216ac-9c35-5011-95dc-3a6b2b90ad99",
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "60568-3",
+              "display": "Pathology report",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "Pathology"
+        },
+        "conclusion": "adenocarcinoma of the rectum",
+        "effectiveDateTime": "2025-07-12",
+        "id": "de002-diagnosticreport-pathology-0001",
+        "issued": "2025-07-12T00:00:00Z",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "display": "Pathologie DE-1"
+          }
+        ],
+        "resourceType": "DiagnosticReport",
+        "specimen": [
+          {
+            "reference": "urn:uuid:79af38fe-3927-5bdf-b37b-1adb70b1a056"
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:415252e5-aefe-501d-aa2a-271c7ee1c54c",
+      "resource": {
+        "basedOn": [
+          {
+            "reference": "urn:uuid:dcdfc0cb-258f-5afe-83eb-db9e2747b387"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "36643-5",
+              "display": "CT chest and Abdomen and Pelvis W contrast IV",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "CT chest/abdomen"
+        },
+        "conclusion": "Known liver and lung metastases persist without anti-EGFR exposure",
+        "effectiveDateTime": "2026-07-20",
+        "id": "de002-diagnosticreport-imaging-0001",
+        "imagingStudy": [
+          {
+            "reference": "urn:uuid:af0fe372-46eb-55a5-b4ac-2f853bf1e3fc"
+          }
+        ],
+        "issued": "2026-07-20T00:00:00Z",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "DiagnosticReport",
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:abfa02b0-be77-5eaf-9ea9-d58d0795ff1a",
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "51969-4",
+              "display": "Genetic analysis report",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "Molecular pathology"
+        },
+        "conclusion": "Molecular marker panel completed",
+        "effectiveDateTime": "2025-07-25",
+        "id": "de002-diagnosticreport-molecular-0001",
+        "issued": "2025-07-25T00:00:00Z",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "display": "Molekularpathologie DE-1"
+          }
+        ],
+        "resourceType": "DiagnosticReport",
+        "result": [
+          {
+            "reference": "urn:uuid:be8d7a19-20a1-59b3-bec8-1a8ca3624a76"
+          },
+          {
+            "reference": "urn:uuid:3b229543-c05e-571d-ba93-700251d04753"
+          },
+          {
+            "reference": "urn:uuid:d3c02aae-309b-58de-bcb6-1478f6e19aa1"
+          },
+          {
+            "reference": "urn:uuid:ddaff9c4-028c-599a-975a-56f49c2a6abf"
+          }
+        ],
+        "specimen": [
+          {
+            "reference": "urn:uuid:79af38fe-3927-5bdf-b37b-1adb70b1a056"
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:79af38fe-3927-5bdf-b37b-1adb70b1a056",
+      "resource": {
+        "collection": {
+          "collectedDateTime": "2025-07-12"
+        },
+        "id": "de002-specimen-tumor-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Specimen",
+        "status": "available",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        },
+        "type": {
+          "text": "Tumor specimen"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a8842b6a-0e8b-5170-a77f-759eaa5ce088",
+      "resource": {
+        "code": {
+          "text": "Rectal biopsy"
+        },
+        "id": "de002-procedure-primary-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "performedDateTime": "2025-07-12",
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:cfbcfa8e-7f97-578d-b361-5e715c951f59"
+          }
+        ],
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:710777cc-1837-56ad-9a49-16ae1602d8d9",
+      "resource": {
+        "effectivePeriod": {
+          "start": "2025-08-15"
+        },
+        "id": "de002-medicationadministration-1-0001",
+        "medicationCodeableConcept": {
+          "text": "FOLFIRI"
+        },
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "Drugs: irinotecan, leucovorin, fluorouracil"
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:cfbcfa8e-7f97-578d-b361-5e715c951f59"
+          }
+        ],
+        "resourceType": "MedicationAdministration",
+        "status": "in-progress",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:af0fe372-46eb-55a5-b4ac-2f853bf1e3fc",
+      "resource": {
+        "id": "de002-imagingstudy-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "numberOfInstances": 1,
+        "numberOfSeries": 1,
+        "resourceType": "ImagingStudy",
+        "started": "2026-07-20",
+        "status": "available",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2650fb2f-a042-5547-8446-2b7f9feba4d5",
+      "resource": {
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "creation": "2026-08-22",
+              "data": "VHVtb3Jib2FyZCBadXNhbW1lbmZhc3N1bmcgREUKUGF0aWVudDogc3ludGhldGljLW1jcmMtREUtMDAyIChTWU5USEVUSVNDSCkKTWV0YXN0YXNpZXJ0ZXMgUmVrdHVta2Fyemlub20gbWl0IEtSQVMgRzEyRC4gRk9MRklSSSBsYXVmZW5kLCBNU0kgbmljaHQgZ2V0ZXN0ZXQsIENFQSB2ZXJhbHRldC4KW1NZTlRIRVRJU0NIRSBURVNUREFURU5d",
+              "language": "de",
+              "title": "Tumorboard Zusammenfassung - Krankenhaus DE-1"
+            }
+          }
+        ],
+        "date": "2026-08-22T00:00:00Z",
+        "id": "de002-documentreference-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "55115-0",
+              "display": "Requested imaging studies information Document",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dcdfc0cb-258f-5afe-83eb-db9e2747b387",
+      "resource": {
+        "authoredOn": "2026-07-01",
+        "code": {
+          "coding": [
+            {
+              "code": "24627-2",
+              "display": "CT Chest",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "CT chest/abdomen"
+        },
+        "id": "de002-servicerequest-1-0001",
+        "intent": "order",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:cfbcfa8e-7f97-578d-b361-5e715c951f59"
+          }
+        ],
+        "resourceType": "ServiceRequest",
+        "status": "completed",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4c701746-b134-55aa-a4e8-d4b8f68d1a9b",
+      "resource": {
+        "class": {
+          "code": "AMB",
+          "display": "ambulatory",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+        },
+        "id": "de002-encounter-mdt-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "period": {
+          "end": "2026-08-22",
+          "start": "2026-08-22"
+        },
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:cfbcfa8e-7f97-578d-b361-5e715c951f59"
+          }
+        ],
+        "resourceType": "Encounter",
+        "serviceProvider": {
+          "display": "Hospital-DE-1"
+        },
+        "status": "finished",
+        "subject": {
+          "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+        },
+        "type": [
+          {
+            "text": "MDT encounter"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:19e3ddeb-2d84-5602-86fb-b3391e555e58",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-patient-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5fa841c4-a679-5b5a-a752-597b7d0acd97",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-condition-primary-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:cfbcfa8e-7f97-578d-b361-5e715c951f59"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eff5b2e0-ee9d-571f-8de4-504b2c96186a",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-condition-metastasis-liver-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:35df02ff-d058-550f-bc12-0f1ca9b60aed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fcff32d7-9298-5294-b128-0d7bda8bc17b",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-condition-metastasis-lung-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:6f2c7002-dbcf-570f-9d68-8c14169b5de8"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8e8f4370-738e-58fa-a6b4-5ae53226ce2c",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-observation-stage-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:fa1a143c-4d45-581a-9a1e-e49021c8b596"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6607db3d-0810-58ac-9094-0d9bacacb4f9",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-observation-kras-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:be8d7a19-20a1-59b3-bec8-1a8ca3624a76"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fa77c1ec-a7c8-536e-a6f5-56c9bcc9e39d",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-observation-nras-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:3b229543-c05e-571d-ba93-700251d04753"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:441d2c36-7996-5bb5-bec8-a9cde0c431cc",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-observation-braf-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:d3c02aae-309b-58de-bcb6-1478f6e19aa1"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:74c69c8f-9ff1-5a29-be61-1a9460db4a67",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-observation-msi-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:ddaff9c4-028c-599a-975a-56f49c2a6abf"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8c86ff18-1437-565a-a136-fc64d9de9d71",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-observation-cea-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:c46d3f79-6f69-570d-bef3-53048274b783"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:82b4e9e3-6004-51b8-8cf4-f9a5eeae6cee",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-diagnosticreport-pathology-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:40e216ac-9c35-5011-95dc-3a6b2b90ad99"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bd2a3b9c-f828-5cb7-964f-bc3960ceffed",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-diagnosticreport-imaging-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:415252e5-aefe-501d-aa2a-271c7ee1c54c"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d54cfac9-88da-5252-b711-a444c4e47279",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-diagnosticreport-molecular-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:abfa02b0-be77-5eaf-9ea9-d58d0795ff1a"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7dc4cd5c-c2c1-50de-9892-c4c7527c3bb2",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-specimen-tumor-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:79af38fe-3927-5bdf-b37b-1adb70b1a056"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:71d40f20-17c9-592c-b334-cfcbbb2c6bb3",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-procedure-primary-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:a8842b6a-0e8b-5170-a77f-759eaa5ce088"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e5996c6f-1f1a-5c25-a819-a416893eff2d",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-medicationadministration-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:710777cc-1837-56ad-9a49-16ae1602d8d9"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a8bd6e6d-3457-5e33-8c03-9c755b4c4e45",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-imagingstudy-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:af0fe372-46eb-55a5-b4ac-2f853bf1e3fc"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:50b687be-cc30-500b-86d0-c85de73f03e7",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-documentreference-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:2650fb2f-a042-5547-8446-2b7f9feba4d5"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c0e0281b-2999-53a3-b486-5285b17efa97",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-servicerequest-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:dcdfc0cb-258f-5afe-83eb-db9e2747b387"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f32a6263-62af-5d8c-8bb0-6d070c6e5634",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-DE-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "MII KDS Onkologie-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "de002-provenance-encounter-mdt-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-22T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:4c701746-b134-55aa-a4e8-d4b8f68d1a9b"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "synthetic-mcrc-DE-002",
+  "meta": {
+    "extension": [
+      {
+        "url": "urn:synthetic-data-notice",
+        "valueString": "SYNTHETIC TEST DATA ONLY - NOT REAL PATIENT DATA"
+      },
+      {
+        "extension": [
+          {
+            "url": "generationSeed",
+            "valueInteger": 42
+          },
+          {
+            "url": "referenceDate",
+            "valueDate": "2026-08-27"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "HL7 FHIR R4"
+              },
+              {
+                "url": "version",
+                "valueString": "4.0.1"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hl7.org/fhir/R4/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "mCODE STU4"
+              },
+              {
+                "url": "version",
+                "valueString": "4.0.0 (alignment only)"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hl7.org/fhir/us/mcode/STU4/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "HL7 Genomics Reporting IG STU2"
+              },
+              {
+                "url": "version",
+                "valueString": "2.0.0"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hl7.org/fhir/uv/genomics-reporting/STU2/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "International Patient Summary STU2"
+              },
+              {
+                "url": "version",
+                "valueString": "2.0.1"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hl7.org/fhir/uv/ips/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "LOINC"
+              },
+              {
+                "url": "version",
+                "valueString": "2.83"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://loinc.org/news/loinc-version-2-83-release-highlights"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "UCUM"
+              },
+              {
+                "url": "version",
+                "valueString": "2.2"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://ucum.org/ucum"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "HGVS Nomenclature"
+              },
+              {
+                "url": "version",
+                "valueString": "21.1"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hgvs-nomenclature.org/stable/versions/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "UICC TNM"
+              },
+              {
+                "url": "version",
+                "valueString": "8th edition"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://www.uicc.org/resources/tnm"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "MII Kerndatensatz Onkologie"
+              },
+              {
+                "url": "version",
+                "valueString": "2024.3.1"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.onkologie"
+              }
+            ],
+            "url": "standardsSource"
+          }
+        ],
+        "url": "urn:oncology-demo:fixture-metadata"
+      }
+    ],
+    "tag": [
+      {
+        "code": "HTEST",
+        "display": "test health data",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+      }
+    ]
+  },
+  "resourceType": "Bundle",
+  "timestamp": "2026-08-27T00:00:00Z",
+  "type": "collection"
+}

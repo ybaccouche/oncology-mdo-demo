@@ -1,0 +1,372 @@
+{
+  "adapterLabel": "MII KDS Onkologie-flavoured FHIR",
+  "decisionPoint": {
+    "question": "Review current mCRC status with KRAS G12D detected, stale CEA and MSI/MMR not tested",
+    "sourceCitation": {
+      "resourceId": "urn:uuid:4c701746-b134-55aa-a4e8-d4b8f68d1a9b",
+      "resourceType": "Encounter"
+    },
+    "type": "restaging"
+  },
+  "diagnosis": {
+    "metastases": [
+      {
+        "code": "C78.7",
+        "diagnosisDate": "2025-07-10",
+        "site": "liver",
+        "sourceCitation": {
+          "resourceId": "urn:uuid:35df02ff-d058-550f-bc12-0f1ca9b60aed",
+          "resourceType": "Condition"
+        },
+        "system": "ICD-10"
+      },
+      {
+        "code": "C78.00",
+        "diagnosisDate": "2025-07-10",
+        "site": "lung",
+        "sourceCitation": {
+          "resourceId": "urn:uuid:6f2c7002-dbcf-570f-9d68-8c14169b5de8",
+          "resourceType": "Condition"
+        },
+        "system": "ICD-10"
+      }
+    ],
+    "primary": {
+      "code": "C20",
+      "diagnosisDate": "2025-07-10",
+      "display": "Malignant neoplasm of rectum",
+      "histology": "adenocarcinoma",
+      "site": "rectum",
+      "snomedCode": "254214001",
+      "snomedDisplay": "Carcinoma of rectum",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:cfbcfa8e-7f97-578d-b361-5e715c951f59",
+        "resourceType": "Condition"
+      },
+      "system": "ICD-10"
+    }
+  },
+  "ecog": null,
+  "fixtureMetadata": {
+    "generationSeed": 42,
+    "referenceDate": "2026-08-27",
+    "standardsSources": [
+      {
+        "name": "HL7 FHIR R4",
+        "url": "https://hl7.org/fhir/R4/",
+        "version": "4.0.1"
+      },
+      {
+        "name": "mCODE STU4",
+        "url": "https://hl7.org/fhir/us/mcode/STU4/",
+        "version": "4.0.0 (alignment only)"
+      },
+      {
+        "name": "HL7 Genomics Reporting IG STU2",
+        "url": "https://hl7.org/fhir/uv/genomics-reporting/STU2/",
+        "version": "2.0.0"
+      },
+      {
+        "name": "International Patient Summary STU2",
+        "url": "https://hl7.org/fhir/uv/ips/",
+        "version": "2.0.1"
+      },
+      {
+        "name": "LOINC",
+        "url": "https://loinc.org/news/loinc-version-2-83-release-highlights",
+        "version": "2.83"
+      },
+      {
+        "name": "UCUM",
+        "url": "https://ucum.org/ucum",
+        "version": "2.2"
+      },
+      {
+        "name": "HGVS Nomenclature",
+        "url": "https://hgvs-nomenclature.org/stable/versions/",
+        "version": "21.1"
+      },
+      {
+        "name": "UICC TNM",
+        "url": "https://www.uicc.org/resources/tnm",
+        "version": "8th edition"
+      },
+      {
+        "name": "MII Kerndatensatz Onkologie",
+        "url": "https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.onkologie",
+        "version": "2024.3.1"
+      }
+    ]
+  },
+  "generatedAt": "2026-08-27T00:00:00Z",
+  "guardrails": {
+    "noRealPatientData": "All clinical content is entirely synthetic and fictional. No real patient data.",
+    "noTreatmentAdvice": "This packet contains historical treatment data only. No treatment recommendations are provided.",
+    "syntheticNotice": "SYNTHETIC TEST DATA ONLY - NOT REAL PATIENT DATA"
+  },
+  "header": {
+    "ageBand": "50-59",
+    "sex": "male",
+    "sourceCitation": {
+      "resourceId": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6",
+      "resourceType": "Patient"
+    },
+    "yearOfBirth": 1972
+  },
+  "imaging": [
+    {
+      "date": "2026-07-20",
+      "isCurrent": true,
+      "sourceCitation": {
+        "resourceId": "urn:uuid:415252e5-aefe-501d-aa2a-271c7ee1c54c",
+        "resourceType": "DiagnosticReport"
+      },
+      "status": "final",
+      "summary": "Known liver and lung metastases persist without anti-EGFR exposure",
+      "type": "CT chest/abdomen"
+    }
+  ],
+  "labs": {
+    "cea": {
+      "date": "2026-04-15",
+      "isCurrent": false,
+      "sourceCitation": {
+        "resourceId": "urn:uuid:c46d3f79-6f69-570d-bef3-53048274b783",
+        "resourceType": "Observation"
+      },
+      "unit": "ug/L",
+      "unitSystem": "http://unitsofmeasure.org",
+      "value": 112.7
+    }
+  },
+  "lateResults": [],
+  "missingData": [
+    {
+      "field": "CEA",
+      "impact": "Treatment monitoring incomplete",
+      "reason": "Last result 2026-04-15, >90 days before reference date",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:c46d3f79-6f69-570d-bef3-53048274b783",
+        "resourceType": "Observation"
+      },
+      "status": "stale"
+    },
+    {
+      "field": "MSI status",
+      "impact": "Immunotherapy eligibility unknown",
+      "reason": "MSI testing not performed",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:ddaff9c4-028c-599a-975a-56f49c2a6abf",
+        "resourceType": "Observation"
+      },
+      "status": "not-tested"
+    }
+  ],
+  "molecularProfile": {
+    "braf": {
+      "date": "2025-07-25",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:d3c02aae-309b-58de-bcb6-1478f6e19aa1",
+        "resourceType": "Observation"
+      },
+      "status": "not-detected"
+    },
+    "kras": {
+      "date": "2025-07-25",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:be8d7a19-20a1-59b3-bec8-1a8ca3624a76",
+        "resourceType": "Observation"
+      },
+      "status": "detected"
+    },
+    "msi": {
+      "date": "2025-07-25",
+      "interpretation": "Not tested",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:ddaff9c4-028c-599a-975a-56f49c2a6abf",
+        "resourceType": "Observation"
+      },
+      "status": "not-tested"
+    },
+    "notes": [],
+    "nras": {
+      "date": "2025-07-25",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:3b229543-c05e-571d-ba93-700251d04753",
+        "resourceType": "Observation"
+      },
+      "status": "not-detected"
+    }
+  },
+  "pathology": {
+    "histology": "adenocarcinoma",
+    "reportDate": "2025-07-12",
+    "site": "rectum",
+    "sourceCitation": {
+      "resourceId": "urn:uuid:40e216ac-9c35-5011-95dc-3a6b2b90ad99",
+      "resourceType": "DiagnosticReport"
+    }
+  },
+  "patientId": "synthetic-mcrc-DE-002",
+  "profileLabel": "mCODE-aligned European demo profile",
+  "readinessState": {
+    "derivedFrom": [
+      "urn:uuid:c46d3f79-6f69-570d-bef3-53048274b783",
+      "urn:uuid:ddaff9c4-028c-599a-975a-56f49c2a6abf"
+    ],
+    "reason": "CEA stale; MSI status not tested",
+    "sourceCitations": [
+      {
+        "resourceId": "urn:uuid:c46d3f79-6f69-570d-bef3-53048274b783",
+        "resourceType": "Observation"
+      },
+      {
+        "resourceId": "urn:uuid:ddaff9c4-028c-599a-975a-56f49c2a6abf",
+        "resourceType": "Observation"
+      }
+    ],
+    "status": "attention-needed"
+  },
+  "sourceCitations": {
+    "adapterLabel": "MII KDS Onkologie-flavoured FHIR",
+    "fhirBundleId": "synthetic-mcrc-DE-002",
+    "hospital": "Hospital-DE-1",
+    "resources": [
+      {
+        "description": "Patient demographics",
+        "resourceId": "urn:uuid:419bc1a7-c394-578b-a0c8-7da48d6fe2c6",
+        "resourceType": "Patient"
+      },
+      {
+        "description": "Primary diagnosis",
+        "resourceId": "urn:uuid:cfbcfa8e-7f97-578d-b361-5e715c951f59",
+        "resourceType": "Condition"
+      },
+      {
+        "description": "Liver metastasis",
+        "resourceId": "urn:uuid:35df02ff-d058-550f-bc12-0f1ca9b60aed",
+        "resourceType": "Condition"
+      },
+      {
+        "description": "Lung metastasis",
+        "resourceId": "urn:uuid:6f2c7002-dbcf-570f-9d68-8c14169b5de8",
+        "resourceType": "Condition"
+      },
+      {
+        "description": "Clinical stage",
+        "resourceId": "urn:uuid:fa1a143c-4d45-581a-9a1e-e49021c8b596",
+        "resourceType": "Observation"
+      },
+      {
+        "description": "KRAS result",
+        "resourceId": "urn:uuid:be8d7a19-20a1-59b3-bec8-1a8ca3624a76",
+        "resourceType": "Observation"
+      },
+      {
+        "description": "NRAS result",
+        "resourceId": "urn:uuid:3b229543-c05e-571d-ba93-700251d04753",
+        "resourceType": "Observation"
+      },
+      {
+        "description": "BRAF result",
+        "resourceId": "urn:uuid:d3c02aae-309b-58de-bcb6-1478f6e19aa1",
+        "resourceType": "Observation"
+      },
+      {
+        "description": "MSI result",
+        "resourceId": "urn:uuid:ddaff9c4-028c-599a-975a-56f49c2a6abf",
+        "resourceType": "Observation"
+      },
+      {
+        "description": "CEA result",
+        "resourceId": "urn:uuid:c46d3f79-6f69-570d-bef3-53048274b783",
+        "resourceType": "Observation"
+      },
+      {
+        "description": "Pathology report",
+        "resourceId": "urn:uuid:40e216ac-9c35-5011-95dc-3a6b2b90ad99",
+        "resourceType": "DiagnosticReport"
+      },
+      {
+        "description": "Imaging report",
+        "resourceId": "urn:uuid:415252e5-aefe-501d-aa2a-271c7ee1c54c",
+        "resourceType": "DiagnosticReport"
+      },
+      {
+        "description": "Molecular report",
+        "resourceId": "urn:uuid:abfa02b0-be77-5eaf-9ea9-d58d0795ff1a",
+        "resourceType": "DiagnosticReport"
+      },
+      {
+        "description": "Tumor specimen",
+        "resourceId": "urn:uuid:79af38fe-3927-5bdf-b37b-1adb70b1a056",
+        "resourceType": "Specimen"
+      },
+      {
+        "description": "Diagnostic procedure",
+        "resourceId": "urn:uuid:a8842b6a-0e8b-5170-a77f-759eaa5ce088",
+        "resourceType": "Procedure"
+      },
+      {
+        "description": "Systemic therapy",
+        "resourceId": "urn:uuid:710777cc-1837-56ad-9a49-16ae1602d8d9",
+        "resourceType": "MedicationAdministration"
+      },
+      {
+        "description": "Imaging study stub",
+        "resourceId": "urn:uuid:af0fe372-46eb-55a5-b4ac-2f853bf1e3fc",
+        "resourceType": "ImagingStudy"
+      },
+      {
+        "description": "Clinical document",
+        "resourceId": "urn:uuid:2650fb2f-a042-5547-8446-2b7f9feba4d5",
+        "resourceType": "DocumentReference"
+      },
+      {
+        "description": "Imaging order",
+        "resourceId": "urn:uuid:dcdfc0cb-258f-5afe-83eb-db9e2747b387",
+        "resourceType": "ServiceRequest"
+      },
+      {
+        "description": "MDT encounter",
+        "resourceId": "urn:uuid:4c701746-b134-55aa-a4e8-d4b8f68d1a9b",
+        "resourceType": "Encounter"
+      }
+    ]
+  },
+  "sourceHospital": "Hospital-DE-1",
+  "stage": {
+    "sourceCitation": {
+      "resourceId": "urn:uuid:fa1a143c-4d45-581a-9a1e-e49021c8b596",
+      "resourceType": "Observation"
+    },
+    "stageGroup": "IV",
+    "system": "AJCC/UICC",
+    "tnm": {
+      "combined": "cT3N2M1b",
+      "m": "M1b",
+      "n": "N2",
+      "prefix": "c",
+      "t": "T3"
+    }
+  },
+  "syntheticDataNotice": "SYNTHETIC TEST DATA ONLY - NOT REAL PATIENT DATA",
+  "treatmentTimeline": [
+    {
+      "drugs": [
+        "irinotecan",
+        "leucovorin",
+        "fluorouracil"
+      ],
+      "endDate": null,
+      "line": 1,
+      "regimen": "FOLFIRI",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:710777cc-1837-56ad-9a49-16ae1602d8d9",
+        "resourceType": "MedicationAdministration"
+      },
+      "startDate": "2025-08-15",
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "adapterLabel": "Nictiz ZIB-flavoured FHIR",
+  "decisionPoint": {
+    "question": "Review current mCRC status with no KRAS, NRAS or BRAF variant detected, MSS/MMR proficient, ECOG 1",
+    "sourceCitation": {
+      "resourceId": "urn:uuid:9521a70b-3626-56a8-abb4-808ccaa4919e",
+      "resourceType": "Encounter"
+    },
+    "type": "continuation-review"
+  },
+  "diagnosis": {
+    "metastases": [
+      {
+        "code": "C78.7",
+        "diagnosisDate": "2025-09-15",
+        "site": "liver",
+        "sourceCitation": {
+          "resourceId": "urn:uuid:a71111bf-c76f-5092-bdd6-cc80dea3c9a5",
+          "resourceType": "Condition"
+        },
+        "system": "ICD-10"
+      }
+    ],
+    "primary": {
+      "code": "C18.7",
+      "diagnosisDate": "2025-09-15",
+      "display": "Malignant neoplasm of sigmoid colon",
+      "histology": "adenocarcinoma",
+      "site": "sigmoid colon",
+      "snomedCode": "363406005",
+      "snomedDisplay": "Malignant tumor of colon (disorder)",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:88651675-1f61-5252-bf7d-9b456305a8bf",
+        "resourceType": "Condition"
+      },
+      "system": "ICD-10"
+    }
+  },
+  "ecog": {
+    "date": "2026-08-20",
+    "score": 1,
+    "sourceCitation": {
+      "resourceId": "urn:uuid:4f51a634-c810-5b32-a131-0ebbda503468",
+      "resourceType": "Observation"
+    }
+  },
+  "fixtureMetadata": {
+    "generationSeed": 42,
+    "referenceDate": "2026-08-27",
+    "standardsSources": [
+      {
+        "name": "HL7 FHIR R4",
+        "url": "https://hl7.org/fhir/R4/",
+        "version": "4.0.1"
+      },
+      {
+        "name": "mCODE STU4",
+        "url": "https://hl7.org/fhir/us/mcode/STU4/",
+        "version": "4.0.0 (alignment only)"
+      },
+      {
+        "name": "HL7 Genomics Reporting IG STU2",
+        "url": "https://hl7.org/fhir/uv/genomics-reporting/STU2/",
+        "version": "2.0.0"
+      },
+      {
+        "name": "International Patient Summary STU2",
+        "url": "https://hl7.org/fhir/uv/ips/",
+        "version": "2.0.1"
+      },
+      {
+        "name": "LOINC",
+        "url": "https://loinc.org/news/loinc-version-2-83-release-highlights",
+        "version": "2.83"
+      },
+      {
+        "name": "UCUM",
+        "url": "https://ucum.org/ucum",
+        "version": "2.2"
+      },
+      {
+        "name": "HGVS Nomenclature",
+        "url": "https://hgvs-nomenclature.org/stable/versions/",
+        "version": "21.1"
+      },
+      {
+        "name": "UICC TNM",
+        "url": "https://www.uicc.org/resources/tnm",
+        "version": "8th edition"
+      },
+      {
+        "name": "Nictiz ZIB 2020 FHIR R4",
+        "url": "https://simplifier.net/packages/nictiz.fhir.nl.r4.zib2020",
+        "version": "exact stable package version unconfirmed; flavour mapping only"
+      }
+    ]
+  },
+  "generatedAt": "2026-08-27T00:00:00Z",
+  "guardrails": {
+    "noRealPatientData": "All clinical content is entirely synthetic and fictional. No real patient data.",
+    "noTreatmentAdvice": "This packet contains historical treatment data only. No treatment recommendations are provided.",
+    "syntheticNotice": "SYNTHETIC TEST DATA ONLY - NOT REAL PATIENT DATA"
+  },
+  "header": {
+    "ageBand": "60-69",
+    "sex": "female",
+    "sourceCitation": {
+      "resourceId": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f",
+      "resourceType": "Patient"
+    },
+    "yearOfBirth": 1963
+  },
+  "imaging": [
+    {
+      "date": "2026-06-15",
+      "isCurrent": true,
+      "sourceCitation": {
+        "resourceId": "urn:uuid:aa5e3d36-0323-5a47-92b9-cfce7ab7ec66",
+        "resourceType": "DiagnosticReport"
+      },
+      "status": "final",
+      "summary": "Stable liver metastases, no new lesions",
+      "type": "CT abdomen/pelvis"
+    }
+  ],
+  "labs": {
+    "cea": {
+      "date": "2026-07-10",
+      "isCurrent": true,
+      "sourceCitation": {
+        "resourceId": "urn:uuid:07d8889f-056c-54c2-8708-ba7294682126",
+        "resourceType": "Observation"
+      },
+      "unit": "ug/L",
+      "unitSystem": "http://unitsofmeasure.org",
+      "value": 48.3
+    }
+  },
+  "lateResults": [],
+  "missingData": [],
+  "molecularProfile": {
+    "braf": {
+      "date": "2025-10-05",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:c0ee1a30-c35b-5127-adec-5c82ac5cd723",
+        "resourceType": "Observation"
+      },
+      "status": "not-detected"
+    },
+    "kras": {
+      "date": "2025-10-05",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:853f8731-9a2e-5433-a46c-2af60419606c",
+        "resourceType": "Observation"
+      },
+      "status": "not-detected"
+    },
+    "msi": {
+      "date": "2025-10-05",
+      "interpretation": "MSS/MMR proficient",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:c12d04b0-283c-526a-8612-333014d335f8",
+        "resourceType": "Observation"
+      },
+      "status": "not-detected"
+    },
+    "notes": [],
+    "nras": {
+      "date": "2025-10-05",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:d96b7ad2-5f0e-5d93-8be6-47aa18b42c5c",
+        "resourceType": "Observation"
+      },
+      "status": "not-detected"
+    }
+  },
+  "pathology": {
+    "histology": "adenocarcinoma",
+    "reportDate": "2025-09-20",
+    "site": "sigmoid colon",
+    "sourceCitation": {
+      "resourceId": "urn:uuid:b60116c1-4dd1-5757-8204-a519d6831fd5",
+      "resourceType": "DiagnosticReport"
+    }
+  },
+  "patientId": "synthetic-mcrc-NL-001",
+  "profileLabel": "mCODE-aligned European demo profile",
+  "readinessState": {
+    "derivedFrom": [
+      "urn:uuid:853f8731-9a2e-5433-a46c-2af60419606c",
+      "urn:uuid:d96b7ad2-5f0e-5d93-8be6-47aa18b42c5c",
+      "urn:uuid:c0ee1a30-c35b-5127-adec-5c82ac5cd723",
+      "urn:uuid:c12d04b0-283c-526a-8612-333014d335f8",
+      "urn:uuid:4f51a634-c810-5b32-a131-0ebbda503468",
+      "urn:uuid:aa5e3d36-0323-5a47-92b9-cfce7ab7ec66"
+    ],
+    "reason": "No KRAS, NRAS or BRAF variant detected; MSS/MMR proficient; ECOG 1; imaging current",
+    "sourceCitations": [
+      {
+        "resourceId": "urn:uuid:853f8731-9a2e-5433-a46c-2af60419606c",
+        "resourceType": "Observation"
+      },
+      {
+        "resourceId": "urn:uuid:d96b7ad2-5f0e-5d93-8be6-47aa18b42c5c",
+        "resourceType": "Observation"
+      },
+      {
+        "resourceId": "urn:uuid:c0ee1a30-c35b-5127-adec-5c82ac5cd723",
+        "resourceType": "Observation"
+      },
+      {
+        "resourceId": "urn:uuid:c12d04b0-283c-526a-8612-333014d335f8",
+        "resourceType": "Observation"
+      },
+      {
+        "resourceId": "urn:uuid:4f51a634-c810-5b32-a131-0ebbda503468",
+        "resourceType": "Observation"
+      },
+      {
+        "resourceId": "urn:uuid:aa5e3d36-0323-5a47-92b9-cfce7ab7ec66",
+        "resourceType": "DiagnosticReport"
+      }
+    ],
+    "status": "ready-for-review"
+  },
+  "sourceCitations": {
+    "adapterLabel": "Nictiz ZIB-flavoured FHIR",
+    "fhirBundleId": "synthetic-mcrc-NL-001",
+    "hospital": "Hospital-NL-1",
+    "resources": [
+      {
+        "description": "Patient demographics",
+        "resourceId": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f",
+        "resourceType": "Patient"
+      },
+      {
+        "description": "Primary diagnosis",
+        "resourceId": "urn:uuid:88651675-1f61-5252-bf7d-9b456305a8bf",
+        "resourceType": "Condition"
+      },
+      {
+        "description": "Liver metastasis",
+        "resourceId": "urn:uuid:a71111bf-c76f-5092-bdd6-cc80dea3c9a5",
+        "resourceType": "Condition"
+      },
+      {
+        "description": "Clinical stage",
+        "resourceId": "urn:uuid:85e1f724-f46e-5ec3-9408-bcef52d8ee37",
+        "resourceType": "Observation"
+      },
+      {
+        "description": "ECOG performance status",
+        "resourceId": "urn:uuid:4f51a634-c810-5b32-a131-0ebbda503468",
+        "resourceType": "Observation"
+      },
+      {
+        "description": "KRAS result",
+        "resourceId": "urn:uuid:853f8731-9a2e-5433-a46c-2af60419606c",
+        "resourceType": "Observation"
+      },
+      {
+        "description": "NRAS result",
+        "resourceId": "urn:uuid:d96b7ad2-5f0e-5d93-8be6-47aa18b42c5c",
+        "resourceType": "Observation"
+      },
+      {
+        "description": "BRAF result",
+        "resourceId": "urn:uuid:c0ee1a30-c35b-5127-adec-5c82ac5cd723",
+        "resourceType": "Observation"
+      },
+      {
+        "description": "MSI result",
+        "resourceId": "urn:uuid:c12d04b0-283c-526a-8612-333014d335f8",
+        "resourceType": "Observation"
+      },
+      {
+        "description": "CEA result",
+        "resourceId": "urn:uuid:07d8889f-056c-54c2-8708-ba7294682126",
+        "resourceType": "Observation"
+      },
+      {
+        "description": "Pathology report",
+        "resourceId": "urn:uuid:b60116c1-4dd1-5757-8204-a519d6831fd5",
+        "resourceType": "DiagnosticReport"
+      },
+      {
+        "description": "Imaging report",
+        "resourceId": "urn:uuid:aa5e3d36-0323-5a47-92b9-cfce7ab7ec66",
+        "resourceType": "DiagnosticReport"
+      },
+      {
+        "description": "Molecular report",
+        "resourceId": "urn:uuid:f5aee232-d59c-5d68-a587-29584b782ee0",
+        "resourceType": "DiagnosticReport"
+      },
+      {
+        "description": "Tumor specimen",
+        "resourceId": "urn:uuid:be0ff65b-66fc-5818-aaaf-c7bbe26080fa",
+        "resourceType": "Specimen"
+      },
+      {
+        "description": "Diagnostic procedure",
+        "resourceId": "urn:uuid:b6a8b70f-d9db-56bf-85b4-4e132ccc4cd5",
+        "resourceType": "Procedure"
+      },
+      {
+        "description": "Systemic therapy",
+        "resourceId": "urn:uuid:e7d887b7-1897-54ab-bd95-27125095d05a",
+        "resourceType": "MedicationAdministration"
+      },
+      {
+        "description": "Imaging study stub",
+        "resourceId": "urn:uuid:2d12606e-7a62-5385-a4d8-d71037d42972",
+        "resourceType": "ImagingStudy"
+      },
+      {
+        "description": "Clinical document",
+        "resourceId": "urn:uuid:687bb213-7ff7-5c18-b0a7-80a719f3fdb7",
+        "resourceType": "DocumentReference"
+      },
+      {
+        "description": "Imaging order",
+        "resourceId": "urn:uuid:4de930ae-b160-5c54-a573-481118263624",
+        "resourceType": "ServiceRequest"
+      },
+      {
+        "description": "MDT encounter",
+        "resourceId": "urn:uuid:9521a70b-3626-56a8-abb4-808ccaa4919e",
+        "resourceType": "Encounter"
+      }
+    ]
+  },
+  "sourceHospital": "Hospital-NL-1",
+  "stage": {
+    "sourceCitation": {
+      "resourceId": "urn:uuid:85e1f724-f46e-5ec3-9408-bcef52d8ee37",
+      "resourceType": "Observation"
+    },
+    "stageGroup": "IV",
+    "system": "AJCC/UICC",
+    "tnm": {
+      "combined": "cT3N1M1a",
+      "m": "M1a",
+      "n": "N1",
+      "prefix": "c",
+      "t": "T3"
+    }
+  },
+  "syntheticDataNotice": "SYNTHETIC TEST DATA ONLY - NOT REAL PATIENT DATA",
+  "treatmentTimeline": [
+    {
+      "drugs": [
+        "oxaliplatin",
+        "leucovorin",
+        "fluorouracil",
+        "bevacizumab"
+      ],
+      "endDate": null,
+      "line": 1,
+      "regimen": "FOLFOX + bevacizumab",
+      "sourceCitation": {
+        "resourceId": "urn:uuid:e7d887b7-1897-54ab-bd95-27125095d05a",
+        "resourceType": "MedicationAdministration"
+      },
+      "startDate": "2025-10-20",
+      "status": "active"
+    }
+  ]
+}

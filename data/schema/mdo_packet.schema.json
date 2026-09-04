@@ -1,0 +1,331 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Oncology MdoPacket",
+  "type": "object",
+  "required": [
+    "syntheticDataNotice",
+    "patientId",
+    "generatedAt",
+    "profileLabel",
+    "sourceHospital",
+    "adapterLabel",
+    "fixtureMetadata",
+    "header",
+    "diagnosis",
+    "stage",
+    "ecog",
+    "molecularProfile",
+    "treatmentTimeline",
+    "labs",
+    "imaging",
+    "pathology",
+    "decisionPoint",
+    "readinessState",
+    "missingData",
+    "lateResults",
+    "sourceCitations",
+    "guardrails"
+  ],
+  "properties": {
+    "syntheticDataNotice": {"const": "SYNTHETIC TEST DATA ONLY - NOT REAL PATIENT DATA"},
+    "patientId": {"type": "string"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "profileLabel": {"type": "string"},
+    "sourceHospital": {"type": "string"},
+    "adapterLabel": {"type": "string"},
+    "fixtureMetadata": {
+      "type": "object",
+      "required": ["generationSeed", "referenceDate", "standardsSources"],
+      "properties": {
+        "generationSeed": {"type": "integer"},
+        "referenceDate": {"type": "string", "format": "date"},
+        "standardsSources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["name", "version", "url"],
+            "properties": {
+              "name": {"type": "string"},
+              "version": {"type": "string"},
+              "url": {"type": "string", "format": "uri"}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "header": {
+      "type": "object",
+      "required": ["ageBand", "sex", "yearOfBirth", "sourceCitation"],
+      "properties": {
+        "ageBand": {"type": "string"},
+        "sex": {"type": "string"},
+        "yearOfBirth": {"type": "integer"},
+        "sourceCitation": {"$ref": "#/$defs/sourceCitation"}
+      },
+      "additionalProperties": false
+    },
+    "diagnosis": {
+      "type": "object",
+      "required": ["primary", "metastases"],
+      "properties": {
+        "primary": {
+          "type": "object",
+          "required": ["code", "system", "display", "snomedCode", "snomedDisplay", "site", "histology", "diagnosisDate", "sourceCitation"],
+          "properties": {
+            "code": {"type": "string"},
+            "system": {"type": "string"},
+            "display": {"type": "string"},
+            "snomedCode": {"type": "string"},
+            "snomedDisplay": {"type": "string"},
+            "site": {"type": "string"},
+            "histology": {"type": "string"},
+            "diagnosisDate": {"type": "string"},
+            "sourceCitation": {"$ref": "#/$defs/sourceCitation"}
+          },
+          "additionalProperties": true
+        },
+        "metastases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["site", "code", "system", "diagnosisDate", "sourceCitation"],
+            "properties": {
+              "site": {"type": "string"},
+              "code": {"type": "string"},
+              "system": {"type": "string"},
+              "diagnosisDate": {"type": "string"},
+              "sourceCitation": {"$ref": "#/$defs/sourceCitation"}
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "stage": {
+      "type": "object",
+      "required": ["system", "stageGroup", "tnm", "sourceCitation"],
+      "properties": {
+        "system": {"type": "string"},
+        "stageGroup": {"type": "string"},
+        "tnm": {
+          "type": "object",
+          "required": ["prefix", "t", "n", "m", "combined"],
+          "properties": {
+            "prefix": {"type": "string"},
+            "t": {"type": "string"},
+            "n": {"type": "string"},
+            "m": {"type": "string"},
+            "combined": {"type": "string"}
+          },
+          "additionalProperties": true
+        },
+        "sourceCitation": {"$ref": "#/$defs/sourceCitation"}
+      },
+      "additionalProperties": true
+    },
+    "ecog": {
+      "anyOf": [
+        {
+          "type": "object",
+          "required": ["score", "date", "sourceCitation"],
+          "properties": {
+            "score": {"type": "integer"},
+            "date": {"type": "string"},
+            "sourceCitation": {"$ref": "#/$defs/sourceCitation"}
+          },
+          "additionalProperties": true
+        },
+        {"type": "null"}
+      ]
+    },
+    "molecularProfile": {
+      "type": "object",
+      "required": ["kras", "nras", "braf", "msi", "notes"],
+      "properties": {
+        "kras": {"$ref": "#/$defs/molecularMarker"},
+        "nras": {"$ref": "#/$defs/molecularMarker"},
+        "braf": {"$ref": "#/$defs/molecularMarker"},
+        "msi": {"$ref": "#/$defs/molecularMarker"},
+        "notes": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    },
+    "treatmentTimeline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["line", "regimen", "drugs", "startDate", "endDate", "status", "sourceCitation"],
+        "properties": {
+          "line": {"type": "integer"},
+          "regimen": {"type": "string"},
+          "drugs": {"type": "array", "items": {"type": "string"}},
+          "startDate": {"type": "string"},
+          "endDate": {"type": ["string", "null"]},
+          "status": {"type": "string"},
+          "sourceCitation": {"$ref": "#/$defs/sourceCitation"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "labs": {
+      "type": "object",
+      "required": ["cea"],
+      "properties": {
+        "cea": {
+          "type": "object",
+          "required": ["value", "unit", "unitSystem", "date", "isCurrent", "sourceCitation"],
+          "properties": {
+            "value": {"type": "number"},
+            "unit": {"type": "string"},
+            "unitSystem": {"type": "string"},
+            "date": {"type": "string"},
+            "isCurrent": {"type": "boolean"},
+            "sourceCitation": {"$ref": "#/$defs/sourceCitation"}
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "imaging": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "date", "status", "summary", "isCurrent", "sourceCitation"],
+        "properties": {
+          "type": {"type": "string"},
+          "date": {"type": "string"},
+          "status": {"type": "string"},
+          "summary": {"type": "string"},
+          "isCurrent": {"type": "boolean"},
+          "arrivedDate": {"type": "string"},
+          "sourceCitation": {"$ref": "#/$defs/sourceCitation"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "pathology": {
+      "type": "object",
+      "required": ["histology", "site", "reportDate", "sourceCitation"],
+      "properties": {
+        "histology": {"type": "string"},
+        "site": {"type": "string"},
+        "reportDate": {"type": "string"},
+        "sourceCitation": {"$ref": "#/$defs/sourceCitation"}
+      },
+      "additionalProperties": true
+    },
+    "decisionPoint": {
+      "type": "object",
+      "required": ["type", "question", "sourceCitation"],
+      "properties": {
+        "type": {"type": "string"},
+        "question": {"type": "string"},
+        "sourceCitation": {"$ref": "#/$defs/sourceCitation"}
+      },
+      "additionalProperties": true
+    },
+    "readinessState": {
+      "type": "object",
+      "required": ["status", "reason", "sourceCitations", "derivedFrom"],
+      "properties": {
+        "status": {"type": "string", "enum": ["ready-for-review", "attention-needed"]},
+        "reason": {"type": "string"},
+        "sourceCitations": {"type": "array", "items": {"$ref": "#/$defs/sourceCitation"}},
+        "derivedFrom": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "missingData": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field", "status", "reason", "impact", "sourceCitation"],
+        "properties": {
+          "field": {"type": "string"},
+          "status": {"type": "string", "enum": ["not-tested", "stale", "result-pending", "unknown"]},
+          "reason": {"type": "string"},
+          "impact": {"type": "string"},
+          "sourceCitation": {"$ref": "#/$defs/sourceCitation"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "lateResults": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item", "orderedDate", "arrivedDate", "summary", "sourceCitation"],
+        "properties": {
+          "item": {"type": "string"},
+          "orderedDate": {"type": "string"},
+          "arrivedDate": {"type": "string"},
+          "summary": {"type": "string"},
+          "arrivalTimestamp": {"type": "string", "format": "date-time"},
+          "sourceCitation": {"$ref": "#/$defs/sourceCitation"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "sourceCitations": {
+      "type": "object",
+      "required": ["hospital", "adapterLabel", "fhirBundleId", "resources"],
+      "properties": {
+        "hospital": {"type": "string"},
+        "adapterLabel": {"type": "string"},
+        "fhirBundleId": {"type": "string"},
+        "resources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["resourceType", "resourceId", "description"],
+            "properties": {
+              "resourceType": {"type": "string"},
+              "resourceId": {"type": "string"},
+              "description": {"type": "string"}
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "guardrails": {
+      "type": "object",
+      "required": ["syntheticNotice", "noTreatmentAdvice", "noRealPatientData"],
+      "properties": {
+        "syntheticNotice": {"type": "string"},
+        "noTreatmentAdvice": {"type": "string"},
+        "noRealPatientData": {"type": "string"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "sourceCitation": {
+      "type": "object",
+      "required": ["resourceType", "resourceId"],
+      "properties": {
+        "resourceType": {"type": "string"},
+        "resourceId": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "molecularMarker": {
+      "type": "object",
+      "required": ["status", "date", "sourceCitation"],
+      "properties": {
+        "status": {"type": "string", "enum": ["detected", "not-detected", "not-tested", "result-pending", "unknown"]},
+        "interpretation": {"type": "string"},
+        "date": {"type": "string"},
+        "sourceCitation": {"$ref": "#/$defs/sourceCitation"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

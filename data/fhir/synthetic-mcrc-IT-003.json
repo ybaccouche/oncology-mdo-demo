@@ -1,0 +1,2359 @@
+{
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5",
+      "resource": {
+        "birthDate": "1949",
+        "gender": "male",
+        "id": "it003-patient-0001",
+        "identifier": [
+          {
+            "system": "urn:synthetic:mcrc:demo",
+            "value": "synthetic-mcrc-IT-003"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7d2dea81-689b-5b3b-a68f-23423481c2d6",
+      "resource": {
+        "bodySite": [
+          {
+            "text": "cecum"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "display": "Problem List Item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "C18.0",
+              "display": "Malignant neoplasm of cecum",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+            },
+            {
+              "code": "94503003",
+              "display": "Malignant tumor of cecum",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "Malignant neoplasm of cecum"
+        },
+        "id": "it003-condition-primary-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "adenocarcinoma"
+          }
+        ],
+        "onsetDateTime": "2025-11-05",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "display": "Confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:effe5b8f-dec7-5c5b-9359-88b902da0394",
+      "resource": {
+        "bodySite": [
+          {
+            "text": "peritoneum"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "display": "Problem List Item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "C78.6",
+              "display": "Secondary malignant neoplasm of retroperitoneum and peritoneum",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+            },
+            {
+              "code": "94513001",
+              "display": "Secondary malignant neoplasm of peritoneum",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "Secondary malignant neoplasm of retroperitoneum and peritoneum"
+        },
+        "id": "it003-condition-metastasis-peritoneum-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "Metastatic disease"
+          }
+        ],
+        "onsetDateTime": "2025-11-05",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "display": "Confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:614aae69-b64d-5c27-a1a7-8c72ef2bd58e",
+      "resource": {
+        "bodySite": [
+          {
+            "text": "Essential (primary) hypertension"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "display": "Problem List Item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "I10",
+              "display": "Essential (primary) hypertension",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+            },
+            {
+              "code": "38341003",
+              "display": "Hypertensive disorder, systemic arterial (disorder)",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "Essential (primary) hypertension"
+        },
+        "id": "it003-condition-comorbidity-hypertension-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "Comorbidity"
+          }
+        ],
+        "onsetDateTime": "2020-01-01",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "display": "Confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aa43d338-2615-5c18-9266-f424f94d23a0",
+      "resource": {
+        "bodySite": [
+          {
+            "text": "Type 2 diabetes mellitus"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "display": "Problem List Item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "E11",
+              "display": "Type 2 diabetes mellitus",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+            },
+            {
+              "code": "44054006",
+              "display": "Diabetes mellitus type 2 (disorder)",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus"
+        },
+        "id": "it003-condition-comorbidity-diabetes-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "Comorbidity"
+          }
+        ],
+        "onsetDateTime": "2019-01-01",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "display": "Confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ff1a434d-0939-5728-b61b-68bc9f9d700d",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "display": "Exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "21908-9",
+              "display": "Stage group.clinical Cancer",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "Clinical TNM stage"
+        },
+        "component": [
+          {
+            "code": {
+              "text": "T category"
+            },
+            "valueString": "cT4a"
+          },
+          {
+            "code": {
+              "text": "N category"
+            },
+            "valueString": "cN2"
+          },
+          {
+            "code": {
+              "text": "M category"
+            },
+            "valueString": "cM1c"
+          }
+        ],
+        "effectiveDateTime": "2025-11-10",
+        "id": "it003-observation-stage-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "method": {
+          "text": "clinical"
+        },
+        "note": [
+          {
+            "text": "cT4aN2M1c"
+          }
+        ],
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "261650005",
+              "display": "Stage IV",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "IV"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a90f259b-b435-55df-9792-9224812c2951",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "survey",
+                "display": "Survey",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "89247-1",
+              "display": "ECOG Performance Status score",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-08-26",
+        "id": "it003-observation-ecog-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "valueInteger": 2
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7225ebd7-a669-5470-8537-61f5e4695a01",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "21288-6",
+              "display": "KRAS gene targeted mutation analysis",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2025-12-01",
+        "id": "it003-observation-kras-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "specimen": {
+          "reference": "urn:uuid:389fcf27-b94c-51db-afae-3144389d8d6b"
+        },
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "260385009",
+              "display": "Negative (qualifier value)",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cda6aea1-6b7d-54e4-9b5e-ec600889a3ee",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "72957-4",
+              "display": "NRAS gene targeted mutation analysis",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2025-12-01",
+        "id": "it003-observation-nras-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "specimen": {
+          "reference": "urn:uuid:389fcf27-b94c-51db-afae-3144389d8d6b"
+        },
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "260385009",
+              "display": "Negative (qualifier value)",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:637ab3c2-1c4c-558c-921e-c1f364e86afd",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "62862-8",
+              "display": "BRAF gene targeted mutation analysis",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "48005-3",
+                  "display": "Amino acid change [Type]",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "p.Val600Glu",
+                  "display": "p.Val600Glu (V600E)",
+                  "system": "http://varnomen.hgvs.org"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "81252-9",
+                  "display": "Discrete genetic variant",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "NM_004333.6:c.1799T>A",
+                  "display": "NM_004333.6:c.1799T>A",
+                  "system": "http://varnomen.hgvs.org"
+                }
+              ]
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "48018-6",
+                  "display": "Gene studied [ID]",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "HGNC:1097",
+                  "display": "BRAF",
+                  "system": "http://www.genenames.org"
+                }
+              ]
+            }
+          }
+        ],
+        "effectiveDateTime": "2025-12-01",
+        "id": "it003-observation-braf-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "specimen": {
+          "reference": "urn:uuid:389fcf27-b94c-51db-afae-3144389d8d6b"
+        },
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "10828004",
+              "display": "Positive (qualifier value)",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:af563f94-5938-5af4-8193-08112b794f65",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "81695-9",
+              "display": "Microsatellite instability [Interpretation] in Cancer specimen Qualitative",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2025-12-01",
+        "id": "it003-observation-msi-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "specimen": {
+          "reference": "urn:uuid:389fcf27-b94c-51db-afae-3144389d8d6b"
+        },
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1255961004",
+              "display": "Microsatellite instability-high",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "MSI-H/dMMR"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:59e02547-1c4b-5816-a886-b58483fa220d",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "2039-6",
+              "display": "CEA [Mass/volume] in Serum or Plasma",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-07-05",
+        "id": "it003-observation-cea-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "valueQuantity": {
+          "code": "ug/L",
+          "system": "http://unitsofmeasure.org",
+          "unit": "ug/L",
+          "value": 287.5
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cf61bbc1-093c-553b-9c79-39a694442385",
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "60568-3",
+              "display": "Pathology report",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "Pathology"
+        },
+        "conclusion": "adenocarcinoma of the cecum",
+        "effectiveDateTime": "2025-11-10",
+        "id": "it003-diagnosticreport-pathology-0001",
+        "issued": "2025-11-10T00:00:00Z",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "display": "Anatomia Patologica IT-1"
+          }
+        ],
+        "resourceType": "DiagnosticReport",
+        "specimen": [
+          {
+            "reference": "urn:uuid:389fcf27-b94c-51db-afae-3144389d8d6b"
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f75ed122-58bd-5c26-be16-0a44f1fed670",
+      "resource": {
+        "basedOn": [
+          {
+            "reference": "urn:uuid:7646fe1a-3f02-5052-8c64-e20ee8b1bfc5"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "36643-5",
+              "display": "CT chest and Abdomen and Pelvis W contrast IV",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "CT chest/abdomen/pelvis"
+        },
+        "conclusion": "Result pending",
+        "effectiveDateTime": "2026-08-20",
+        "id": "it003-diagnosticreport-imaging-0001",
+        "imagingStudy": [
+          {
+            "reference": "urn:uuid:a067934f-990f-5938-9b61-0c5f5de47c7a"
+          }
+        ],
+        "issued": "2026-08-25T00:00:00Z",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "DiagnosticReport",
+        "status": "registered",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8b4d7a84-c46e-52fe-a646-7a868d8b04f8",
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "51969-4",
+              "display": "Genetic analysis report",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "Molecular pathology"
+        },
+        "conclusion": "Molecular marker panel completed",
+        "effectiveDateTime": "2025-12-01",
+        "id": "it003-diagnosticreport-molecular-0001",
+        "issued": "2025-12-01T00:00:00Z",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "display": "Laboratorio di Oncologia Molecolare IT-1"
+          }
+        ],
+        "resourceType": "DiagnosticReport",
+        "result": [
+          {
+            "reference": "urn:uuid:7225ebd7-a669-5470-8537-61f5e4695a01"
+          },
+          {
+            "reference": "urn:uuid:cda6aea1-6b7d-54e4-9b5e-ec600889a3ee"
+          },
+          {
+            "reference": "urn:uuid:637ab3c2-1c4c-558c-921e-c1f364e86afd"
+          },
+          {
+            "reference": "urn:uuid:af563f94-5938-5af4-8193-08112b794f65"
+          }
+        ],
+        "specimen": [
+          {
+            "reference": "urn:uuid:389fcf27-b94c-51db-afae-3144389d8d6b"
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:389fcf27-b94c-51db-afae-3144389d8d6b",
+      "resource": {
+        "collection": {
+          "collectedDateTime": "2025-11-10"
+        },
+        "id": "it003-specimen-tumor-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Specimen",
+        "status": "available",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "type": {
+          "text": "Tumor specimen"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7051d3d3-d619-564b-8817-25002b351acf",
+      "resource": {
+        "code": {
+          "text": "Cecal biopsy"
+        },
+        "id": "it003-procedure-primary-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "performedDateTime": "2025-11-10",
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:7d2dea81-689b-5b3b-a68f-23423481c2d6"
+          }
+        ],
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8f7486f2-d099-57d5-81c9-4b4d4ad6b84c",
+      "resource": {
+        "effectivePeriod": {
+          "start": "2026-01-10"
+        },
+        "id": "it003-medicationadministration-1-0001",
+        "medicationCodeableConcept": {
+          "text": "FOLFOXIRI"
+        },
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "Drugs: oxaliplatin, leucovorin, fluorouracil, irinotecan"
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:7d2dea81-689b-5b3b-a68f-23423481c2d6"
+          }
+        ],
+        "resourceType": "MedicationAdministration",
+        "status": "in-progress",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a067934f-990f-5938-9b61-0c5f5de47c7a",
+      "resource": {
+        "id": "it003-imagingstudy-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "numberOfInstances": 1,
+        "numberOfSeries": 1,
+        "resourceType": "ImagingStudy",
+        "started": "2026-08-20",
+        "status": "registered",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:17bbff85-ca57-5065-9090-7d060988beb4",
+      "resource": {
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "creation": "2026-08-25",
+              "data": "UmVmZXJ0byBUQyBUb3JhY2UvQWRkb21lL1BlbHZpIC0gMjAyNi0wOC0yMApPc3BlZGFsZSBJVC0xClBhdGllbnQ6IHN5bnRoZXRpYy1tY3JjLUlULTAwMyAoU0lOVEVUSUNPIC0gREFUSSBESSBURVNUKQpNYWxhdHRpYSBwZXJpdG9uZWFsZSBzdGFiaWxlLiBOdW92YSBwaWNjb2xhIGxlc2lvbmUgZXBhdGljYSAoNW1tKS4gQ29uc2lnbGlhdGEgcmV2aXNpb25lIE1EVC4KW0RBVEkgU0lOVEVUSUNJIC0gTk9OIERBVEkgUkVBTEkgREkgUEFaSUVOVEld",
+              "language": "it",
+              "title": "Referto CT - Ospedale IT-1"
+            }
+          }
+        ],
+        "date": "2026-08-25T00:00:00Z",
+        "id": "it003-documentreference-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "55115-0",
+              "display": "Requested imaging studies information Document",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7646fe1a-3f02-5052-8c64-e20ee8b1bfc5",
+      "resource": {
+        "authoredOn": "2026-08-01",
+        "code": {
+          "coding": [
+            {
+              "code": "24627-2",
+              "display": "CT Chest",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "CT chest/abdomen/pelvis"
+        },
+        "id": "it003-servicerequest-1-0001",
+        "intent": "order",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:7d2dea81-689b-5b3b-a68f-23423481c2d6"
+          }
+        ],
+        "resourceType": "ServiceRequest",
+        "status": "active",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1ebe8633-a228-5719-9b32-a5337301c29b",
+      "resource": {
+        "class": {
+          "code": "AMB",
+          "display": "ambulatory",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+        },
+        "id": "it003-encounter-mdt-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "period": {
+          "end": "2026-08-26",
+          "start": "2026-08-26"
+        },
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:7d2dea81-689b-5b3b-a68f-23423481c2d6"
+          }
+        ],
+        "resourceType": "Encounter",
+        "serviceProvider": {
+          "display": "Hospital-IT-1"
+        },
+        "status": "finished",
+        "subject": {
+          "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+        },
+        "type": [
+          {
+            "text": "MDT encounter"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2df98e32-63ac-5c48-92dd-9e40ce9c7172",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-patient-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:1f58ef18-cc20-5d3e-a098-bd546d379cb5"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:548f773b-01a6-55b3-ac5d-903519df4b95",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-condition-primary-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:7d2dea81-689b-5b3b-a68f-23423481c2d6"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:03f8103c-08ee-5f43-a5a2-8bf6b66fba3b",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-condition-metastasis-peritoneum-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:effe5b8f-dec7-5c5b-9359-88b902da0394"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:900f2091-5b55-5293-90f0-b249d9aa6958",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-condition-comorbidity-hypertension-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:614aae69-b64d-5c27-a1a7-8c72ef2bd58e"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1f7c2187-1247-5a60-b203-fab50d4864a1",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-condition-comorbidity-diabetes-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:aa43d338-2615-5c18-9266-f424f94d23a0"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c7476671-f0d0-56b2-b8f1-31332ccdbc0c",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-observation-stage-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:ff1a434d-0939-5728-b61b-68bc9f9d700d"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:da920de1-a15d-58fd-a286-707ddad88128",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-observation-ecog-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:a90f259b-b435-55df-9792-9224812c2951"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:84103f8b-104c-5f7e-92ca-c06c29ad92fc",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-observation-kras-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:7225ebd7-a669-5470-8537-61f5e4695a01"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8b70add9-40a5-58f6-9396-b308f0a062d2",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-observation-nras-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:cda6aea1-6b7d-54e4-9b5e-ec600889a3ee"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7685ee85-1dab-5f53-9487-f56d272f5a10",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-observation-braf-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:637ab3c2-1c4c-558c-921e-c1f364e86afd"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:112ee7d1-e3c8-502d-8c31-475cd91f0a1f",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-observation-msi-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:af563f94-5938-5af4-8193-08112b794f65"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4dd45d99-c1b6-58b8-bf0b-bed7a3d6bfea",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-observation-cea-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:59e02547-1c4b-5816-a886-b58483fa220d"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a3fff95f-b9b4-58a7-99a5-90531851c502",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-diagnosticreport-pathology-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:cf61bbc1-093c-553b-9c79-39a694442385"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9dee3b1e-31f3-5e42-a601-16ecfff64741",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-diagnosticreport-imaging-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:f75ed122-58bd-5c26-be16-0a44f1fed670"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4f0924ba-19f7-5be2-946c-8e5799d7ce65",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-diagnosticreport-molecular-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:8b4d7a84-c46e-52fe-a646-7a868d8b04f8"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:96c6c31f-61b4-5ebd-9e9c-a99669237731",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-specimen-tumor-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:389fcf27-b94c-51db-afae-3144389d8d6b"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:464f5745-7231-5263-9894-304f324f084d",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-procedure-primary-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:7051d3d3-d619-564b-8817-25002b351acf"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8c19d278-13a5-579b-b50e-fb90fb220c22",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-medicationadministration-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:8f7486f2-d099-57d5-81c9-4b4d4ad6b84c"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:195f6f2c-9af1-5e88-8847-23690dbae987",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-imagingstudy-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:a067934f-990f-5938-9b61-0c5f5de47c7a"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:72747087-1e06-5949-b8f4-3c0b11b6ee73",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-documentreference-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:17bbff85-ca57-5065-9090-7d060988beb4"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5c980c48-6165-5c30-adcb-07e29f8bd23c",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-servicerequest-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:7646fe1a-3f02-5052-8c64-e20ee8b1bfc5"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:78ef0613-e010-5fea-92fa-464c3d039b24",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-IT-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "HL7 Italia IT-Core + base FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "it003-provenance-encounter-mdt-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-26T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:1ebe8633-a228-5719-9b32-a5337301c29b"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "synthetic-mcrc-IT-003",
+  "meta": {
+    "extension": [
+      {
+        "url": "urn:synthetic-data-notice",
+        "valueString": "SYNTHETIC TEST DATA ONLY - NOT REAL PATIENT DATA"
+      },
+      {
+        "extension": [
+          {
+            "url": "generationSeed",
+            "valueInteger": 42
+          },
+          {
+            "url": "referenceDate",
+            "valueDate": "2026-08-27"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "HL7 FHIR R4"
+              },
+              {
+                "url": "version",
+                "valueString": "4.0.1"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hl7.org/fhir/R4/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "mCODE STU4"
+              },
+              {
+                "url": "version",
+                "valueString": "4.0.0 (alignment only)"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hl7.org/fhir/us/mcode/STU4/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "HL7 Genomics Reporting IG STU2"
+              },
+              {
+                "url": "version",
+                "valueString": "2.0.0"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hl7.org/fhir/uv/genomics-reporting/STU2/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "International Patient Summary STU2"
+              },
+              {
+                "url": "version",
+                "valueString": "2.0.1"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hl7.org/fhir/uv/ips/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "LOINC"
+              },
+              {
+                "url": "version",
+                "valueString": "2.83"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://loinc.org/news/loinc-version-2-83-release-highlights"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "UCUM"
+              },
+              {
+                "url": "version",
+                "valueString": "2.2"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://ucum.org/ucum"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "HGVS Nomenclature"
+              },
+              {
+                "url": "version",
+                "valueString": "21.1"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hgvs-nomenclature.org/stable/versions/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "UICC TNM"
+              },
+              {
+                "url": "version",
+                "valueString": "8th edition"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://www.uicc.org/resources/tnm"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "HL7 Italia IT-Core"
+              },
+              {
+                "url": "version",
+                "valueString": "0.2.0 draft"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://www.hl7.it/fhir/core/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "HL7 Italia published FHIR guides"
+              },
+              {
+                "url": "version",
+                "valueString": "no oncology-specific guide published as of 2026-08-27"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://www.hl7.it/fhir/"
+              }
+            ],
+            "url": "standardsSource"
+          }
+        ],
+        "url": "urn:oncology-demo:fixture-metadata"
+      }
+    ],
+    "tag": [
+      {
+        "code": "HTEST",
+        "display": "test health data",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+      }
+    ]
+  },
+  "resourceType": "Bundle",
+  "timestamp": "2026-08-27T00:00:00Z",
+  "type": "collection"
+}

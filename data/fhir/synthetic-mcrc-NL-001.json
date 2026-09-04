@@ -1,0 +1,2040 @@
+{
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f",
+      "resource": {
+        "birthDate": "1963",
+        "gender": "female",
+        "id": "nl001-patient-0001",
+        "identifier": [
+          {
+            "system": "urn:synthetic:mcrc:demo",
+            "value": "synthetic-mcrc-NL-001"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:88651675-1f61-5252-bf7d-9b456305a8bf",
+      "resource": {
+        "bodySite": [
+          {
+            "text": "sigmoid colon"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "display": "Problem List Item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "C18.7",
+              "display": "Malignant neoplasm of sigmoid colon",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+            },
+            {
+              "code": "363406005",
+              "display": "Malignant tumor of colon (disorder)",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "Malignant neoplasm of sigmoid colon"
+        },
+        "id": "nl001-condition-primary-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "adenocarcinoma"
+          }
+        ],
+        "onsetDateTime": "2025-09-15",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "display": "Confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a71111bf-c76f-5092-bdd6-cc80dea3c9a5",
+      "resource": {
+        "bodySite": [
+          {
+            "text": "liver"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "display": "Problem List Item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "Active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "C78.7",
+              "display": "Secondary malignant neoplasm of liver",
+              "system": "http://hl7.org/fhir/sid/icd-10"
+            },
+            {
+              "code": "94381002",
+              "display": "Secondary malignant neoplasm of liver",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "Secondary malignant neoplasm of liver"
+        },
+        "id": "nl001-condition-metastasis-liver-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "Metastatic disease"
+          }
+        ],
+        "onsetDateTime": "2025-09-15",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "display": "Confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:85e1f724-f46e-5ec3-9408-bcef52d8ee37",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "display": "Exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "21908-9",
+              "display": "Stage group.clinical Cancer",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "Clinical TNM stage"
+        },
+        "component": [
+          {
+            "code": {
+              "text": "T category"
+            },
+            "valueString": "cT3"
+          },
+          {
+            "code": {
+              "text": "N category"
+            },
+            "valueString": "cN1"
+          },
+          {
+            "code": {
+              "text": "M category"
+            },
+            "valueString": "cM1a"
+          }
+        ],
+        "effectiveDateTime": "2025-09-20",
+        "id": "nl001-observation-stage-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "method": {
+          "text": "clinical"
+        },
+        "note": [
+          {
+            "text": "cT3N1M1a"
+          }
+        ],
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "261650005",
+              "display": "Stage IV",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "IV"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4f51a634-c810-5b32-a131-0ebbda503468",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "survey",
+                "display": "Survey",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "89247-1",
+              "display": "ECOG Performance Status score",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-08-20",
+        "id": "nl001-observation-ecog-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        },
+        "valueInteger": 1
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:853f8731-9a2e-5433-a46c-2af60419606c",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "21288-6",
+              "display": "KRAS gene targeted mutation analysis",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2025-10-05",
+        "id": "nl001-observation-kras-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "specimen": {
+          "reference": "urn:uuid:be0ff65b-66fc-5818-aaaf-c7bbe26080fa"
+        },
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "260385009",
+              "display": "Negative (qualifier value)",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d96b7ad2-5f0e-5d93-8be6-47aa18b42c5c",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "72957-4",
+              "display": "NRAS gene targeted mutation analysis",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2025-10-05",
+        "id": "nl001-observation-nras-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "specimen": {
+          "reference": "urn:uuid:be0ff65b-66fc-5818-aaaf-c7bbe26080fa"
+        },
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "260385009",
+              "display": "Negative (qualifier value)",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c0ee1a30-c35b-5127-adec-5c82ac5cd723",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "62862-8",
+              "display": "BRAF gene targeted mutation analysis",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2025-10-05",
+        "id": "nl001-observation-braf-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "specimen": {
+          "reference": "urn:uuid:be0ff65b-66fc-5818-aaaf-c7bbe26080fa"
+        },
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "260385009",
+              "display": "Negative (qualifier value)",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c12d04b0-283c-526a-8612-333014d335f8",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "81695-9",
+              "display": "Microsatellite instability [Interpretation] in Cancer specimen Qualitative",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2025-10-05",
+        "id": "nl001-observation-msi-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "specimen": {
+          "reference": "urn:uuid:be0ff65b-66fc-5818-aaaf-c7bbe26080fa"
+        },
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1255962006",
+              "display": "Microsatellite stable",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "MSS/MMR proficient"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:07d8889f-056c-54c2-8708-ba7294682126",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "2039-6",
+              "display": "CEA [Mass/volume] in Serum or Plasma",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-07-10",
+        "id": "nl001-observation-cea-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        },
+        "valueQuantity": {
+          "code": "ug/L",
+          "system": "http://unitsofmeasure.org",
+          "unit": "ug/L",
+          "value": 48.3
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b60116c1-4dd1-5757-8204-a519d6831fd5",
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "60568-3",
+              "display": "Pathology report",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "Pathology"
+        },
+        "conclusion": "adenocarcinoma of the sigmoid colon",
+        "effectiveDateTime": "2025-09-20",
+        "id": "nl001-diagnosticreport-pathology-0001",
+        "issued": "2025-09-20T00:00:00Z",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "display": "Pathologielab NL-1"
+          }
+        ],
+        "resourceType": "DiagnosticReport",
+        "specimen": [
+          {
+            "reference": "urn:uuid:be0ff65b-66fc-5818-aaaf-c7bbe26080fa"
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aa5e3d36-0323-5a47-92b9-cfce7ab7ec66",
+      "resource": {
+        "basedOn": [
+          {
+            "reference": "urn:uuid:4de930ae-b160-5c54-a573-481118263624"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "36643-5",
+              "display": "CT chest and Abdomen and Pelvis W contrast IV",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "CT abdomen/pelvis"
+        },
+        "conclusion": "Stable liver metastases, no new lesions",
+        "effectiveDateTime": "2026-06-15",
+        "id": "nl001-diagnosticreport-imaging-0001",
+        "imagingStudy": [
+          {
+            "reference": "urn:uuid:2d12606e-7a62-5385-a4d8-d71037d42972"
+          }
+        ],
+        "issued": "2026-06-15T00:00:00Z",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "DiagnosticReport",
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f5aee232-d59c-5d68-a587-29584b782ee0",
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "51969-4",
+              "display": "Genetic analysis report",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "Molecular pathology"
+        },
+        "conclusion": "Molecular marker panel completed",
+        "effectiveDateTime": "2025-10-05",
+        "id": "nl001-diagnosticreport-molecular-0001",
+        "issued": "2025-10-05T00:00:00Z",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "display": "Moleculaire diagnostiek NL-1"
+          }
+        ],
+        "resourceType": "DiagnosticReport",
+        "result": [
+          {
+            "reference": "urn:uuid:853f8731-9a2e-5433-a46c-2af60419606c"
+          },
+          {
+            "reference": "urn:uuid:d96b7ad2-5f0e-5d93-8be6-47aa18b42c5c"
+          },
+          {
+            "reference": "urn:uuid:c0ee1a30-c35b-5127-adec-5c82ac5cd723"
+          },
+          {
+            "reference": "urn:uuid:c12d04b0-283c-526a-8612-333014d335f8"
+          }
+        ],
+        "specimen": [
+          {
+            "reference": "urn:uuid:be0ff65b-66fc-5818-aaaf-c7bbe26080fa"
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:be0ff65b-66fc-5818-aaaf-c7bbe26080fa",
+      "resource": {
+        "collection": {
+          "collectedDateTime": "2025-09-20"
+        },
+        "id": "nl001-specimen-tumor-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "Specimen",
+        "status": "available",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        },
+        "type": {
+          "text": "Tumor specimen"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b6a8b70f-d9db-56bf-85b4-4e132ccc4cd5",
+      "resource": {
+        "code": {
+          "text": "Diagnostic colonoscopy with biopsy"
+        },
+        "id": "nl001-procedure-primary-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "performedDateTime": "2025-09-18",
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:88651675-1f61-5252-bf7d-9b456305a8bf"
+          }
+        ],
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e7d887b7-1897-54ab-bd95-27125095d05a",
+      "resource": {
+        "effectivePeriod": {
+          "start": "2025-10-20"
+        },
+        "id": "nl001-medicationadministration-1-0001",
+        "medicationCodeableConcept": {
+          "text": "FOLFOX + bevacizumab"
+        },
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "Drugs: oxaliplatin, leucovorin, fluorouracil, bevacizumab"
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:88651675-1f61-5252-bf7d-9b456305a8bf"
+          }
+        ],
+        "resourceType": "MedicationAdministration",
+        "status": "in-progress",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2d12606e-7a62-5385-a4d8-d71037d42972",
+      "resource": {
+        "id": "nl001-imagingstudy-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "numberOfInstances": 1,
+        "numberOfSeries": 1,
+        "resourceType": "ImagingStudy",
+        "started": "2026-06-15",
+        "status": "available",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:687bb213-7ff7-5c18-b0a7-80a719f3fdb7",
+      "resource": {
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "creation": "2026-08-20",
+              "data": "TURUIHNhbWVudmF0dGluZyBOTApQYXRpZW50OiBzeW50aGV0aWMtbWNyYy1OTC0wMDEgKFNZTlRIRVRJU0NIKQpTaWdtb8OvZCBhZGVub2NhcmNpbm9vbSBtZXQgbGV2ZXJtZXRhc3Rhc2VuLiAxTCBGT0xGT1ggKyBiZXZhY2l6dW1hYiBhY3RpZWYuCltTWU5USEVUSVNDSEUgVEVTVERBVEFd",
+              "language": "nl",
+              "title": "MDT samenvatting - Ziekenhuis NL-1"
+            }
+          }
+        ],
+        "date": "2026-08-20T00:00:00Z",
+        "id": "nl001-documentreference-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "55115-0",
+              "display": "Requested imaging studies information Document",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4de930ae-b160-5c54-a573-481118263624",
+      "resource": {
+        "authoredOn": "2026-06-01",
+        "code": {
+          "coding": [
+            {
+              "code": "24627-2",
+              "display": "CT Chest",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "CT abdomen/pelvis"
+        },
+        "id": "nl001-servicerequest-1-0001",
+        "intent": "order",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:88651675-1f61-5252-bf7d-9b456305a8bf"
+          }
+        ],
+        "resourceType": "ServiceRequest",
+        "status": "completed",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9521a70b-3626-56a8-abb4-808ccaa4919e",
+      "resource": {
+        "class": {
+          "code": "AMB",
+          "display": "ambulatory",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+        },
+        "id": "nl001-encounter-mdt-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "period": {
+          "end": "2026-08-20",
+          "start": "2026-08-20"
+        },
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:88651675-1f61-5252-bf7d-9b456305a8bf"
+          }
+        ],
+        "resourceType": "Encounter",
+        "serviceProvider": {
+          "display": "Hospital-NL-1"
+        },
+        "status": "finished",
+        "subject": {
+          "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+        },
+        "type": [
+          {
+            "text": "MDT encounter"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6cfe9b66-6c6a-58a0-9071-fd863f3d3cd0",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-patient-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:a77e74f7-b8cd-56d8-ad46-daff1ccf4d8f"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f7fc5c14-8a8c-5311-851b-b3346fcc2654",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-condition-primary-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:88651675-1f61-5252-bf7d-9b456305a8bf"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a19db187-2d83-5d4d-a44b-7ac5b8e85c10",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-condition-metastasis-liver-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:a71111bf-c76f-5092-bdd6-cc80dea3c9a5"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7c740a5b-2627-5cc5-aad7-7a5a39631e95",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-observation-stage-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:85e1f724-f46e-5ec3-9408-bcef52d8ee37"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:427e3381-e1c6-5804-a1c1-5b96c3b4e66c",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-observation-ecog-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:4f51a634-c810-5b32-a131-0ebbda503468"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d72a444b-19ca-5d64-8fa7-ed49894ec7f1",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-observation-kras-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:853f8731-9a2e-5433-a46c-2af60419606c"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f3aedcff-4176-51aa-b877-1743821085dd",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-observation-nras-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:d96b7ad2-5f0e-5d93-8be6-47aa18b42c5c"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fbd13136-0d25-56a3-a30d-a077646d1b67",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-observation-braf-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:c0ee1a30-c35b-5127-adec-5c82ac5cd723"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:90227dee-1b05-5f2a-929d-814e6da22fec",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-observation-msi-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:c12d04b0-283c-526a-8612-333014d335f8"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9aa931ac-dbc6-527a-8142-deaea7d60243",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-observation-cea-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:07d8889f-056c-54c2-8708-ba7294682126"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bb0dde57-2260-5e88-8382-49eb954cd8c7",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-diagnosticreport-pathology-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:b60116c1-4dd1-5757-8204-a519d6831fd5"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aa61c131-de52-5149-b4cd-b2357d954f48",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-diagnosticreport-imaging-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:aa5e3d36-0323-5a47-92b9-cfce7ab7ec66"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c57a40db-f968-5a2c-a14b-9edf337dff14",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-diagnosticreport-molecular-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:f5aee232-d59c-5d68-a587-29584b782ee0"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:35b4b6d1-337d-51f8-9faf-b1f2f6e5825c",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-specimen-tumor-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:be0ff65b-66fc-5818-aaaf-c7bbe26080fa"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:863274bb-2177-5974-9188-a2a01e9b0324",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-procedure-primary-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:b6a8b70f-d9db-56bf-85b4-4e132ccc4cd5"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:95026408-406f-5875-bd21-35d7946f705f",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-medicationadministration-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:e7d887b7-1897-54ab-bd95-27125095d05a"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c2f02a15-c19e-5efc-b2e8-9ac73072d1c2",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-imagingstudy-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:2d12606e-7a62-5385-a4d8-d71037d42972"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:74e65db6-e076-53be-9150-91f359e078bd",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-documentreference-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:687bb213-7ff7-5c18-b0a7-80a719f3fdb7"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7fe19e30-5904-5c14-b576-3f03c78c5e82",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-servicerequest-1-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:4de930ae-b160-5c54-a573-481118263624"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:85792dcf-e09c-560c-82d7-6eca26086256",
+      "resource": {
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "display": "create",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "display": "Hospital-NL-1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "display": "Nictiz ZIB-flavoured FHIR synthetic data"
+            }
+          }
+        ],
+        "id": "nl001-provenance-encounter-mdt-0001",
+        "meta": {
+          "tag": [
+            {
+              "code": "HTEST",
+              "display": "test health data",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "recorded": "2026-08-20T00:00:00Z",
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "urn:uuid:9521a70b-3626-56a8-abb4-808ccaa4919e"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "synthetic-mcrc-NL-001",
+  "meta": {
+    "extension": [
+      {
+        "url": "urn:synthetic-data-notice",
+        "valueString": "SYNTHETIC TEST DATA ONLY - NOT REAL PATIENT DATA"
+      },
+      {
+        "extension": [
+          {
+            "url": "generationSeed",
+            "valueInteger": 42
+          },
+          {
+            "url": "referenceDate",
+            "valueDate": "2026-08-27"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "HL7 FHIR R4"
+              },
+              {
+                "url": "version",
+                "valueString": "4.0.1"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hl7.org/fhir/R4/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "mCODE STU4"
+              },
+              {
+                "url": "version",
+                "valueString": "4.0.0 (alignment only)"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hl7.org/fhir/us/mcode/STU4/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "HL7 Genomics Reporting IG STU2"
+              },
+              {
+                "url": "version",
+                "valueString": "2.0.0"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hl7.org/fhir/uv/genomics-reporting/STU2/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "International Patient Summary STU2"
+              },
+              {
+                "url": "version",
+                "valueString": "2.0.1"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hl7.org/fhir/uv/ips/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "LOINC"
+              },
+              {
+                "url": "version",
+                "valueString": "2.83"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://loinc.org/news/loinc-version-2-83-release-highlights"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "UCUM"
+              },
+              {
+                "url": "version",
+                "valueString": "2.2"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://ucum.org/ucum"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "HGVS Nomenclature"
+              },
+              {
+                "url": "version",
+                "valueString": "21.1"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://hgvs-nomenclature.org/stable/versions/"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "UICC TNM"
+              },
+              {
+                "url": "version",
+                "valueString": "8th edition"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://www.uicc.org/resources/tnm"
+              }
+            ],
+            "url": "standardsSource"
+          },
+          {
+            "extension": [
+              {
+                "url": "name",
+                "valueString": "Nictiz ZIB 2020 FHIR R4"
+              },
+              {
+                "url": "version",
+                "valueString": "exact stable package version unconfirmed; flavour mapping only"
+              },
+              {
+                "url": "url",
+                "valueUrl": "https://simplifier.net/packages/nictiz.fhir.nl.r4.zib2020"
+              }
+            ],
+            "url": "standardsSource"
+          }
+        ],
+        "url": "urn:oncology-demo:fixture-metadata"
+      }
+    ],
+    "tag": [
+      {
+        "code": "HTEST",
+        "display": "test health data",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+      }
+    ]
+  },
+  "resourceType": "Bundle",
+  "timestamp": "2026-08-27T00:00:00Z",
+  "type": "collection"
+}
