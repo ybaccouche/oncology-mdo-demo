@@ -349,6 +349,45 @@ textarea:focus { outline: none; border-color: var(--cp-accent); }
 .kbd { font-family: Consolas, "Courier New", Courier, monospace; font-size: 11px; border: 1px solid var(--cp-border);
   border-bottom-width: 2px; border-radius: 5px; padding: 1px 5px; background: var(--cp-surface); color: var(--cp-text-muted); }
 
+/* ---------- voice copilot ---------- */
+#voicePanel { position: fixed; right: 20px; bottom: 20px; z-index: 100; width: min(430px, calc(100vw - 40px));
+  max-height: calc(100vh - 40px); display: none; flex-direction: column; background: var(--cp-surface);
+  border: 1px solid var(--cp-border-strong); border-radius: 16px; box-shadow: var(--cp-shadow); overflow: hidden; }
+#voicePanel.on { display: flex; }
+.vc-head { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-bottom: 1px solid var(--cp-border);
+  background: var(--cp-bg-elevated); }
+.vc-head .orb { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--cp-accent-soft); color: var(--cp-accent); font-weight: 700; }
+.vc-head .title { font-size: 13.5px; font-weight: 650; }
+.vc-head .status { font-size: 11px; color: var(--cp-text-muted); }
+.vc-body { padding: 14px; overflow: auto; }
+.vc-context { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border: 1px solid var(--cp-border);
+  border-radius: 10px; background: var(--cp-surface-soft); margin-bottom: 12px; font-size: 12px; }
+.vc-context select { flex: 1; min-width: 0; border: 1px solid var(--cp-border); border-radius: 8px; padding: 5px 7px;
+  background: var(--cp-surface); color: var(--cp-text); font: inherit; }
+.vc-prompts { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.vc-prompt { border: 1px solid var(--cp-border); background: var(--cp-surface); color: var(--cp-text);
+  border-radius: 999px; padding: 5px 9px; font-size: 11px; }
+.vc-prompt:hover { border-color: var(--cp-accent); color: var(--cp-accent); background: var(--cp-accent-soft); }
+.vc-turn { padding: 10px 11px; border-radius: 10px; margin-bottom: 8px; font-size: 12.5px; line-height: 1.5; }
+.vc-turn.user { margin-left: 34px; background: var(--cp-accent-soft); border: 1px solid color-mix(in srgb, var(--cp-accent) 25%, transparent); }
+.vc-turn.agent { margin-right: 18px; background: var(--cp-surface-soft); border: 1px solid var(--cp-border); }
+.vc-turn .who { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--cp-text-muted); font-weight: 700; margin-bottom: 3px; }
+.vc-empty { font-size: 12px; color: var(--cp-text-muted); text-align: center; padding: 8px 12px 16px; }
+.vc-input { display: flex; gap: 7px; padding: 11px 14px; border-top: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+.vc-input input { flex: 1; min-width: 0; border: 1px solid var(--cp-border); border-radius: 10px; padding: 8px 10px;
+  background: var(--cp-surface); color: var(--cp-text); font: inherit; }
+.vc-input input:focus { outline: none; border-color: var(--cp-accent); }
+.vc-mic.listening { background: var(--cp-danger); border-color: var(--cp-danger); color: var(--cp-accent-fg); }
+.vc-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 10px; }
+.vc-metric { border: 1px solid var(--cp-border); border-radius: 9px; padding: 7px 8px; background: var(--cp-bg-elevated); }
+.vc-metric .n { font-size: 15px; font-weight: 650; }
+.vc-metric .l { font-size: 9.5px; color: var(--cp-text-muted); text-transform: uppercase; letter-spacing: .04em; }
+.vc-note { margin-top: 9px; font-size: 10.5px; color: var(--cp-text-muted); }
+@keyframes evidencefocus { 0%, 100% { outline-color: transparent; } 35% { outline-color: var(--cp-accent); } }
+.voice-focus { outline: 3px solid transparent; outline-offset: 3px; animation: evidencefocus 1.8s ease 2; }
+
 @media (max-width: 1020px) { .kpis { grid-template-columns: repeat(2, 1fr); } .grid2 { grid-template-columns: 1fr; } .two { grid-template-columns: 1fr; } }
 </style>
 </head>
@@ -364,6 +403,7 @@ textarea:focus { outline: none; border-color: var(--cp-accent); }
     </div>
     <div class="spacer"></div>
     <button class="btn sm" id="themeBtn">Toggle theme</button>
+    <button class="btn sm" id="voiceBtn">🎙 Voice copilot</button>
     <button class="btn sm" id="mdoBtn">▶ MDO mode</button>
     <button class="btn sm primary" id="simBtn">▶ Simulate CT arrival (IT-003)</button>
     <div class="persona">
@@ -408,6 +448,7 @@ textarea:focus { outline: none; border-color: var(--cp-accent); }
 <div id="toast"><div class="th"><span>✅</span><span id="toastT"></span></div><div class="tb" id="toastB"></div></div>
 <div id="prov"></div>
 <div id="mdoMode"></div>
+<aside id="voicePanel" aria-label="MDO voice copilot"></aside>
 
 <script>
 /*__MDO_DATA__*/
@@ -429,7 +470,9 @@ const ORDER = MDO.cases.map((c) => c.short);
 
 const state = { view: "list", caseId: null, tab: "packet", resolved: false, decisions: {},
   criteria: { mol: true, mCategory: true, side: false, ecog: false, ageBand: false, priorLines: false },
-  mdoOn: false, mdoIndex: 0, mdoStart: 0 };
+  mdoOn: false, mdoIndex: 0, mdoStart: 0, voiceOn: false, voiceCase: "IT-003",
+  voiceTurns: [], voiceAttempts: 0, voiceRecognised: 0, voiceLatency: null, voiceSpeechLatency: null,
+  voiceListening: false, voiceSpeak: true };
 
 function caseOf(short) {
   return (short === "IT-003" && state.resolved) ? RESOLVED_IT : BASE[short];
@@ -1397,6 +1440,276 @@ function simulateLateResult() {
   }
 }
 
+/* ============================== voice copilot ============================== */
+let voiceRecognition = null;
+
+function voiceGaps(c) {
+  return failing(c).map((f) => {
+    const d = declaredFor(f.name, c.packet.missingData);
+    return d ? f.name + " (" + d.status + ")" : f.name + " (derived gap)";
+  });
+}
+
+function voiceOpening(c) {
+  const p = c.packet, gaps = voiceGaps(c);
+  const decision = state.decisions[c.short];
+  if (decision && decision.outcome) {
+    return "Yes. The board recorded " + decision.outcome + " for " + c.short +
+      ". The rationale remains available in the Decision and letter view.";
+  }
+  if (gaps.length) {
+    return c.short + " has no recorded board outcome yet. The automated review found " +
+      gaps.length + " blocking item" + (gaps.length === 1 ? "" : "s") + ": " +
+      listJoin(gaps) + ". The case should remain open for human review.";
+  }
+  return c.short + " is ready for review: all " + c.readiness.total +
+    " required evidence checks pass. There is no recorded human board outcome yet. " +
+    "The board question is: " + p.decisionPoint.question;
+}
+
+function voiceMissing(c) {
+  const gaps = failing(c);
+  if (!gaps.length) {
+    return "Nothing required by the readiness rules is missing for " + c.short +
+      ". All " + c.readiness.total + " checks pass.";
+  }
+  return "The review for " + c.short + " is blocked by " + gaps.map((f) => {
+    const d = declaredFor(f.name, c.packet.missingData);
+    return f.name + ": " + (d ? d.reason : f.detail);
+  }).join(". ") + ".";
+}
+
+function voiceRadiology(c) {
+  const imgs = c.packet.imaging || [];
+  if (!imgs.length) return "The packet contains no imaging contribution for " + c.short + ".";
+  return "Radiology contribution for " + c.short + ": " + imgs.map((i) =>
+    i.type + " from " + i.date + " is " + i.status + ". " + i.summary +
+    (i.arrivedDate ? " The report arrived on " + i.arrivedDate + "." : "")
+  ).join(" ");
+}
+
+function voiceExchange(c) {
+  const gaps = failing(c);
+  const imagingGap = gaps.find((f) => f.name.toLowerCase().indexOf("imaging") >= 0);
+  if (imagingGap) {
+    return {
+      text: "Radiology says the imaging result is still pending. The chief of staff therefore keeps the combined review incomplete and leaves the clinical decision to the board.",
+      parts: [
+        { role: "Radiologist", text: "The current imaging report is not final, so I cannot complete the radiology assessment." },
+        { role: "Chief of staff", text: "I will keep the review incomplete and show the missing imaging evidence to the clinician." }
+      ]
+    };
+  }
+  return {
+    text: "Radiology reports that current imaging is available. The chief of staff confirms that this dependency no longer blocks review, while the final clinical decision remains with the board.",
+    parts: [
+      { role: "Radiologist", text: "Current final imaging is available in the packet and linked to its source record." },
+      { role: "Chief of staff", text: "The imaging dependency is resolved. I will present the evidence, not make the treatment decision." }
+    ]
+  };
+}
+
+function routeVoiceQuery(query, c) {
+  const q = query.toLowerCase();
+  if (q.indexOf("arriv") >= 0 || q.indexOf("result land") >= 0 || q.indexOf("resolve") >= 0) {
+    if (c.short !== "IT-003") {
+      return { tab: "ready", text: "The late-result simulation is attached to IT-003. I kept the current case unchanged." };
+    }
+    if (!state.resolved) simulateLateResult();
+    const updated = caseOf("IT-003");
+    return { tab: "timeline", text: "The CT report has arrived. The packet was regenerated and all " +
+      updated.readiness.total + " readiness checks now pass. The case is ready for human review." };
+  }
+  if (q.indexOf("radiolog") >= 0 && (q.indexOf("voice") >= 0 || q.indexOf("exchange") >= 0 || q.indexOf("disagree") >= 0)) {
+    const exchange = voiceExchange(c);
+    return { tab: "packet", text: exchange.text, parts: exchange.parts };
+  }
+  if (q.indexOf("radiolog") >= 0 || q.indexOf("imaging") >= 0 || q.indexOf("report") >= 0) {
+    return { tab: "packet", text: voiceRadiology(c) };
+  }
+  if (q.indexOf("missing") >= 0 || q.indexOf("block") >= 0 || q.indexOf("outstanding") >= 0) {
+    return { tab: "ready", text: voiceMissing(c) };
+  }
+  if (q.indexOf("patient") >= 0 && (q.indexOf("summary") >= 0 || q.indexOf("explain") >= 0)) {
+    return { tab: "patient", text: "I opened the patient-facing summary. It uses plain language, includes no prognosis or treatment recommendation, and requires clinician review before sharing." };
+  }
+  if (q.indexOf("trial") >= 0 || q.indexOf("research") >= 0) {
+    const eligible = c.trials.filter((t) => t.verdict === "eligible").length;
+    const blocked = c.trials.filter((t) => t.verdict === "blocked").length;
+    return { tab: "trials", text: "Illustrative screening found " + eligible + " eligible and " + blocked +
+      " unevaluable studies for " + c.short + ". This is descriptive screening, not treatment advice." };
+  }
+  if (q.indexOf("discuss") >= 0 || q.indexOf("outcome") >= 0 || q.indexOf("review") >= 0 || q.indexOf("plan") >= 0) {
+    return { tab: "brief", text: voiceOpening(c) };
+  }
+  return { tab: "brief", text: "I can summarise the review status, explain missing information, show the radiology contribution, open trial screening, or play the specialist voice exchange for " + c.short + "." };
+}
+
+function showVoiceEvidence(short, tab) {
+  if (state.mdoOn) exitMdo();
+  state.view = "detail";
+  state.caseId = short;
+  state.tab = tab;
+  $("#viewList").classList.add("hide");
+  $("#viewDetail").classList.remove("hide");
+  renderDetail();
+  window.setTimeout(() => {
+    const card = $("#viewDetail .grid2 > div:first-child .card");
+    if (card) {
+      card.classList.add("voice-focus");
+      card.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, 40);
+}
+
+function pickVoice(index) {
+  const voices = window.speechSynthesis ? window.speechSynthesis.getVoices() : [];
+  const english = voices.filter((v) => /^en([-_]|$)/i.test(v.lang));
+  const pool = english.length ? english : voices;
+  return pool.length ? pool[index % pool.length] : null;
+}
+
+function speakVoice(text, parts, startedAt) {
+  if (!state.voiceSpeak || !("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const lines = parts && parts.length ? parts : [{ role: "Chief of staff", text: text }];
+  lines.forEach((part, i) => {
+    const u = new SpeechSynthesisUtterance(part.role + ". " + part.text);
+    u.lang = "en-GB";
+    u.rate = i ? 0.98 : 1.02;
+    u.pitch = i ? 0.9 : 1.08;
+    const v = pickVoice(i);
+    if (v) u.voice = v;
+    if (i === 0) {
+      u.onstart = () => {
+        state.voiceSpeechLatency = Math.round(performance.now() - startedAt);
+        renderVoicePanel();
+      };
+    }
+    window.speechSynthesis.speak(u);
+  });
+}
+
+function processVoiceQuery(query, source) {
+  const clean = String(query || "").trim();
+  if (!clean) return;
+  const startedAt = performance.now();
+  state.voiceAttempts += 1;
+  if (source === "microphone") state.voiceRecognised += 1;
+  const c = caseOf(state.voiceCase);
+  const answer = routeVoiceQuery(clean, c);
+  state.voiceLatency = Math.round(performance.now() - startedAt);
+  state.voiceSpeechLatency = null;
+  state.voiceTurns.push({ who: "Clinician", text: clean, kind: "user" });
+  state.voiceTurns.push({ who: answer.parts ? "Specialist exchange" : "Chief of staff", text: answer.text, kind: "agent" });
+  if (state.voiceTurns.length > 10) state.voiceTurns = state.voiceTurns.slice(-10);
+  showVoiceEvidence(state.voiceCase, answer.tab);
+  renderVoicePanel();
+  speakVoice(answer.text, answer.parts, startedAt);
+}
+
+function stopVoiceRecognition() {
+  if (voiceRecognition) {
+    try { voiceRecognition.stop(); } catch (e) { /* recognition may already be stopped */ }
+  }
+  state.voiceListening = false;
+}
+
+function startVoiceRecognition() {
+  const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!Recognition) {
+    toast("Microphone unavailable", "Use the prompt buttons or type the clinician question. Spoken replies still work where supported.");
+    return;
+  }
+  stopVoiceRecognition();
+  voiceRecognition = new Recognition();
+  voiceRecognition.lang = "en-GB";
+  voiceRecognition.interimResults = false;
+  voiceRecognition.maxAlternatives = 1;
+  voiceRecognition.onstart = () => { state.voiceListening = true; renderVoicePanel(); };
+  voiceRecognition.onend = () => { state.voiceListening = false; renderVoicePanel(); };
+  voiceRecognition.onerror = (e) => {
+    state.voiceListening = false;
+    renderVoicePanel();
+    toast("Voice recognition stopped", e.error === "not-allowed" ? "Microphone permission was not granted. Typed prompts remain available." : "Recognition error: " + e.error + ".");
+  };
+  voiceRecognition.onresult = (e) => processVoiceQuery(e.results[0][0].transcript, "microphone");
+  voiceRecognition.start();
+}
+
+function renderVoicePanel() {
+  const p = $("#voicePanel");
+  p.classList.toggle("on", state.voiceOn);
+  if (!state.voiceOn) return;
+  const supported = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+  const turns = state.voiceTurns.length
+    ? state.voiceTurns.map((t) => '<div class="vc-turn ' + t.kind + '"><span class="who">' + esc(t.who) + "</span>" + esc(t.text) + "</div>").join("")
+    : '<div class="vc-empty">Try the opening question, then ask a follow-up. The selected case remains in context.</div>';
+  const success = state.voiceAttempts ? Math.round(100 * state.voiceRecognised / state.voiceAttempts) + "%" : "—";
+  p.innerHTML =
+    '<div class="vc-head"><div class="orb">AI</div><div><div class="title">MDO voice copilot</div>' +
+      '<div class="status">' + (state.voiceListening ? "Listening…" : "Fixed-response prototype · evidence linked") + '</div></div>' +
+      '<div class="spacer"></div><button class="btn sm" id="vcSound">' + (state.voiceSpeak ? "🔊" : "🔇") + '</button>' +
+      '<button class="btn sm" id="vcClose">Close</button></div>' +
+    '<div class="vc-body"><div class="vc-context"><b>Case context</b><select id="vcCase">' +
+      ORDER.map((s) => '<option value="' + esc(s) + '"' + (s === state.voiceCase ? " selected" : "") + ">" + esc(s) + "</option>").join("") +
+      '</select></div><div class="vc-prompts">' +
+      '<button class="vc-prompt" data-q="Has this patient been discussed, and what was the outcome?">Opening question</button>' +
+      '<button class="vc-prompt" data-q="What information was missing?">Missing information</button>' +
+      '<button class="vc-prompt" data-q="Show me what the radiology agent contributed.">Radiology contribution</button>' +
+      '<button class="vc-prompt" data-q="Play the radiology and chief of staff voice exchange.">Specialist voices</button>' +
+      '<button class="vc-prompt" data-q="Simulate the late result arriving.">Late result</button></div>' +
+      '<div id="vcTurns">' + turns + '</div>' +
+      '<div class="vc-metrics"><div class="vc-metric"><div class="n">' + state.voiceAttempts + '</div><div class="l">Attempts</div></div>' +
+      '<div class="vc-metric"><div class="n">' + (state.voiceLatency == null ? "—" : state.voiceLatency + " ms") + '</div><div class="l">Screen response</div></div>' +
+      '<div class="vc-metric"><div class="n">' + (state.voiceSpeechLatency == null ? "—" : state.voiceSpeechLatency + " ms") + '</div><div class="l">Speech start</div></div></div>' +
+      '<div class="vc-note">Microphone recognition: ' + (supported ? success + " of all attempts" : "not available in this browser") +
+      '. Typed prompts provide the reliable live fallback. Synthetic data; no clinical action is executed.</div></div>' +
+    '<div class="vc-input"><button class="btn vc-mic' + (state.voiceListening ? " listening" : "") + '" id="vcMic" title="Use microphone">' +
+      (state.voiceListening ? "■" : "🎙") + '</button><input id="vcInput" aria-label="Clinician question" placeholder="Ask about outcome, missing data or radiology…">' +
+      '<button class="btn primary" id="vcSend">Ask</button></div>';
+
+  $("#vcClose").addEventListener("click", () => {
+    stopVoiceRecognition();
+    if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+    state.voiceOn = false;
+    renderVoicePanel();
+  });
+  $("#vcSound").addEventListener("click", () => {
+    state.voiceSpeak = !state.voiceSpeak;
+    if (!state.voiceSpeak && "speechSynthesis" in window) window.speechSynthesis.cancel();
+    renderVoicePanel();
+  });
+  $("#vcCase").addEventListener("change", (e) => {
+    state.voiceCase = e.target.value;
+    state.voiceTurns = [];
+    showVoiceEvidence(state.voiceCase, "brief");
+    renderVoicePanel();
+  });
+  p.querySelectorAll("[data-q]").forEach((b) => b.addEventListener("click", () => processVoiceQuery(b.dataset.q, "prompt")));
+  $("#vcMic").addEventListener("click", () => state.voiceListening ? stopVoiceRecognition() : startVoiceRecognition());
+  const submit = () => {
+    const input = $("#vcInput");
+    processVoiceQuery(input.value, "typed");
+  };
+  $("#vcSend").addEventListener("click", submit);
+  $("#vcInput").addEventListener("keydown", (e) => { if (e.key === "Enter") submit(); });
+  const turnsEl = $("#vcTurns");
+  if (turnsEl) turnsEl.scrollTop = turnsEl.scrollHeight;
+}
+
+function toggleVoiceCopilot() {
+  state.voiceOn = !state.voiceOn;
+  if (state.voiceOn) {
+    state.voiceCase = state.caseId || state.voiceCase;
+    showVoiceEvidence(state.voiceCase, "brief");
+  } else {
+    stopVoiceRecognition();
+    if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+  }
+  renderVoicePanel();
+}
+
 /* ============================== MDO mode ============================== */
 function mdoOrder() {
   return ORDER.slice().sort((a, b) => caseOf(a).readiness.score - caseOf(b).readiness.score);
@@ -1602,6 +1915,7 @@ document.addEventListener("keydown", (e) => {
 /* ============================== init ============================== */
 $("#simBtn").addEventListener("click", (e) => { e.stopPropagation(); simulateLateResult(); });
 $("#mdoBtn").addEventListener("click", (e) => { e.stopPropagation(); enterMdo(); });
+$("#voiceBtn").addEventListener("click", (e) => { e.stopPropagation(); toggleVoiceCopilot(); });
 $("#themeBtn").addEventListener("click", (e) => {
   e.stopPropagation();
   const cur = document.documentElement.getAttribute("data-theme");

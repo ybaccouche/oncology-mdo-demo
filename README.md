@@ -76,6 +76,30 @@ handled — the variation clinicians raised on 13 Aug. The UI degrades honestly:
 criteria the packet cannot answer are disabled and called out, and subgroups
 under 15 cases are labelled too small to interpret.
 
+## Voice copilot prototype
+
+Use **Voice copilot** in the header to run Simone's voice-and-screen experiment.
+The prototype keeps one case in context and supports:
+
+- the opening question about review status and outcome;
+- follow-ups about missing information and the radiology contribution;
+- a two-voice radiologist / chief-of-staff exchange;
+- automatic navigation to the supporting dashboard view;
+- a microphone path where browser speech recognition is available;
+- prompt buttons and typed input as a reliable fallback; and
+- per-session attempt, screen-response and speech-start measurements.
+
+All answers are deterministic and assembled from the selected synthetic packet.
+The copilot explicitly distinguishes automated preparation from a recorded human
+board decision and does not execute clinical or scheduling actions.
+
+**Demo recommendation.** Run the prompt buttons or typed questions live because
+they are deterministic and move the dashboard immediately. Treat browser
+microphone recognition as optional: permissions, network policy and room noise
+can make it unreliable. Keep a short screen recording as the fallback. Use the
+specialist voice exchange only once to explain role separation; the single
+chief-of-staff voice is faster and clearer for the rest of the demo.
+
 ## Guardrail
 
 `packet.guardrails.noTreatmentAdvice` says the packets carry historical
@@ -99,3 +123,5 @@ is present anywhere in this repo.
 - Confirm whether `ecog: null` on DE-002 is intentional.
 - Federation view — the three national FHIR flavours are the strongest
   differentiator in the data and are not yet visible on screen.
+- Replace deterministic voice responses with Marcel's specialist-agent outputs
+  after their input/output contract is agreed.
