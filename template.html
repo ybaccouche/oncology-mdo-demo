@@ -472,7 +472,7 @@ const state = { view: "list", caseId: null, tab: "packet", resolved: false, deci
   criteria: { mol: true, mCategory: true, side: false, ecog: false, ageBand: false, priorLines: false },
   mdoOn: false, mdoIndex: 0, mdoStart: 0, voiceOn: false, voiceCase: "IT-003",
   voiceTurns: [], voiceAttempts: 0, voiceRecognised: 0, voiceLatency: null, voiceSpeechLatency: null,
-  voiceListening: false, voiceSpeak: true };
+  voiceListening: false, voiceSpeak: true, voiceURI: "" };
 
 function caseOf(short) {
   return (short === "IT-003" && state.resolved) ? RESOLVED_IT : BASE[short];
@@ -1562,11 +1562,29 @@ function showVoiceEvidence(short, tab) {
   }, 40);
 }
 
-function pickVoice(index) {
+function voiceOptions() {
   const voices = window.speechSynthesis ? window.speechSynthesis.getVoices() : [];
   const english = voices.filter((v) => /^en([-_]|$)/i.test(v.lang));
-  const pool = english.length ? english : voices;
-  return pool.length ? pool[index % pool.length] : null;
+  return english.length ? english : voices;
+}
+
+function pickVoice(index) {
+  const pool = voiceOptions();
+  const selected = state.voiceURI ? pool.find((v) => v.voiceURI === state.voiceURI) : null;
+  if (index === 0) return selected || null;
+  if (!pool.length) return null;
+  const alternatives = selected ? pool.filter((v) => v.voiceURI !== selected.voiceURI) : pool.slice(1);
+  return alternatives.length ? alternatives[(index - 1) % alternatives.length] : (selected || pool[0]);
+}
+
+function previewVoice() {
+  if (!("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance("This is the selected chief of staff voice for the MDO demonstration.");
+  u.lang = "en-GB";
+  const v = pickVoice(0);
+  if (v) u.voice = v;
+  window.speechSynthesis.speak(u);
 }
 
 function speakVoice(text, parts, startedAt) {
@@ -1642,6 +1660,7 @@ function renderVoicePanel() {
   p.classList.toggle("on", state.voiceOn);
   if (!state.voiceOn) return;
   const supported = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+  const voices = voiceOptions();
   const turns = state.voiceTurns.length
     ? state.voiceTurns.map((t) => '<div class="vc-turn ' + t.kind + '"><span class="who">' + esc(t.who) + "</span>" + esc(t.text) + "</div>").join("")
     : '<div class="vc-empty">Try the opening question, then ask a follow-up. The selected case remains in context.</div>';
@@ -1653,7 +1672,10 @@ function renderVoicePanel() {
       '<button class="btn sm" id="vcClose">Close</button></div>' +
     '<div class="vc-body"><div class="vc-context"><b>Case context</b><select id="vcCase">' +
       ORDER.map((s) => '<option value="' + esc(s) + '"' + (s === state.voiceCase ? " selected" : "") + ">" + esc(s) + "</option>").join("") +
-      '</select></div><div class="vc-prompts">' +
+      '</select></div><div class="vc-context"><b>Voice</b><select id="vcVoice"><option value="">System default</option>' +
+      voices.map((v) => '<option value="' + esc(v.voiceURI) + '"' + (v.voiceURI === state.voiceURI ? " selected" : "") + ">" +
+        esc(v.name + " · " + v.lang) + "</option>").join("") +
+      '</select><button class="btn sm" id="vcPreview">Preview</button></div><div class="vc-prompts">' +
       '<button class="vc-prompt" data-q="Has this patient been discussed, and what was the outcome?">Opening question</button>' +
       '<button class="vc-prompt" data-q="What information was missing?">Missing information</button>' +
       '<button class="vc-prompt" data-q="Show me what the radiology agent contributed.">Radiology contribution</button>' +
@@ -1686,6 +1708,12 @@ function renderVoicePanel() {
     showVoiceEvidence(state.voiceCase, "brief");
     renderVoicePanel();
   });
+  $("#vcVoice").addEventListener("change", (e) => {
+    state.voiceURI = e.target.value;
+    previewVoice();
+    renderVoicePanel();
+  });
+  $("#vcPreview").addEventListener("click", previewVoice);
   p.querySelectorAll("[data-q]").forEach((b) => b.addEventListener("click", () => processVoiceQuery(b.dataset.q, "prompt")));
   $("#vcMic").addEventListener("click", () => state.voiceListening ? stopVoiceRecognition() : startVoiceRecognition());
   const submit = () => {
@@ -1916,6 +1944,9 @@ document.addEventListener("keydown", (e) => {
 $("#simBtn").addEventListener("click", (e) => { e.stopPropagation(); simulateLateResult(); });
 $("#mdoBtn").addEventListener("click", (e) => { e.stopPropagation(); enterMdo(); });
 $("#voiceBtn").addEventListener("click", (e) => { e.stopPropagation(); toggleVoiceCopilot(); });
+if ("speechSynthesis" in window) {
+  window.speechSynthesis.addEventListener("voiceschanged", () => { if (state.voiceOn) renderVoicePanel(); });
+}
 $("#themeBtn").addEventListener("click", (e) => {
   e.stopPropagation();
   const cur = document.documentElement.getAttribute("data-theme");

@@ -84,6 +84,7 @@ The prototype keeps one case in context and supports:
 - the opening question about review status and outcome;
 - follow-ups about missing information and the radiology contribution;
 - a two-voice radiologist / chief-of-staff exchange;
+- a picker and preview for the English voices installed in the browser/OS;
 - automatic navigation to the supporting dashboard view;
 - a microphone path where browser speech recognition is available;
 - prompt buttons and typed input as a reliable fallback; and
